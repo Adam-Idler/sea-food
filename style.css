@@ -339,6 +339,11 @@ ul {
     padding-bottom: 80px;
 }
 
+.section_about-us {
+    padding-top: 180px;
+    padding-bottom: 65px;
+}
+
 .section__title {
     font-size: 48px;
     font-weight: 700;
@@ -1072,3 +1077,61 @@ ul {
 }
 
 /* secton-gift end */
+
+/* section-about-us start */
+
+.section_about-us .section__title {
+    margin-bottom: 0;
+}
+
+.section_about-us__wrapper {
+    width: 100%;
+    background-color: #F4F5F5;
+    padding: 64px 21% 64px 21%;
+    display: flex;
+    align-items: center;
+}
+
+.section_about-us__img {
+    width: 570px;
+    height: 340px;
+    border-radius: 20px;
+    object-fit: cover;
+    object-position: center;
+    margin-right: 40px;
+}
+
+.section_about-us__heading {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.section_about-us__words {
+    font-size: 16px;
+    margin-bottom: 25px;
+    max-width: 430px;
+}
+
+@media (max-width: 1600px) {
+    .section_about-us__wrapper {
+        padding-left: 12%;
+        padding-right: 12%;
+    }
+}
+
+@media (max-width: 1430px) {
+    .section_about-us__wrapper {
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+}
+
+@media (max-width: 1290px) {
+    .section_about-us__wrapper {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+}
+
+/* section-about-us end */
