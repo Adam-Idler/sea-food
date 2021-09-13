@@ -836,7 +836,7 @@ ul {
 
 /* button-show-more start */
 
-.catalog-btn-show-more__wrapper {
+.separator__wrapper {
     margin: 0 -50px;
     position: relative;
     text-align: center;
@@ -1135,3 +1135,129 @@ ul {
 }
 
 /* section-about-us end */
+
+/* footer start */
+
+.footer {
+    padding-top: 80px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+
+}
+
+.footer__nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 85px;
+}
+
+.footer__nav-item  {
+    max-width: 250px;
+}
+
+.footer__nav-heading {
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+.footer__nav-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__nav-links-item {
+    color: #73767D;
+    margin-bottom: 18px;
+    font-size: 16px;
+}
+
+.footer__nav-links-item:last-child {
+    margin-bottom: 18px;
+}
+
+.footer__nav-contacts {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__nav-contacts-item {
+    margin-bottom: 20px;
+    color: #73767D;
+    display: inline-flex;
+    align-items: center;
+}
+
+.footer__nav-contacts-item:first-of-type::before {
+    content: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.55056 0.799805H3.9998C2.23249 0.799805 0.799805 2.23249 0.799805 3.9998V7.1998C0.799805 16.0364 7.96325 23.1998 16.7998 23.1998H19.9998C21.7671 23.1998 23.1998 21.7671 23.1998 19.9998V17.7887C23.1998 17.1826 22.8574 16.6286 22.3153 16.3576L18.4499 14.4248C17.579 13.9894 16.5243 14.4262 16.2164 15.35L15.74 16.7792C15.4314 17.705 14.4817 18.2562 13.5247 18.0648C9.69467 17.2988 6.70083 14.3049 5.93482 10.4749C5.74343 9.51792 6.29456 8.56822 7.22038 8.25961L8.99419 7.66834C9.78734 7.40396 10.2432 6.57349 10.0405 5.76239L9.10279 2.01175C8.92472 1.29948 8.28475 0.799805 7.55056 0.799805Z' stroke='%2373767D'/%3E%3C/svg%3E%0A");
+    margin-right: 8px;
+}
+
+.footer__nav-contacts-item:nth-of-type(2)::before {
+    content: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.55056 0.799805H3.9998C2.23249 0.799805 0.799805 2.23249 0.799805 3.9998V7.1998C0.799805 16.0364 7.96325 23.1998 16.7998 23.1998H19.9998C21.7671 23.1998 23.1998 21.7671 23.1998 19.9998V17.7887C23.1998 17.1826 22.8574 16.6286 22.3153 16.3576L18.4499 14.4248C17.579 13.9894 16.5243 14.4262 16.2164 15.35L15.74 16.7792C15.4314 17.705 14.4817 18.2562 13.5247 18.0648C9.69467 17.2988 6.70083 14.3049 5.93482 10.4749C5.74343 9.51792 6.29456 8.56822 7.22038 8.25961L8.99419 7.66834C9.78734 7.40396 10.2432 6.57349 10.0405 5.76239L9.10279 2.01175C8.92472 1.29948 8.28475 0.799805 7.55056 0.799805Z' stroke='%23010409'/%3E%3C/svg%3E ");
+    margin-right: 8px;
+}
+
+.footer__nav-contacts-item:last-of-type::before {
+    content: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.799805 7.20039L11.9998 13.6004L23.1998 7.20039M2.3998 2.40039H21.5998C22.4835 2.40039 23.1998 3.11674 23.1998 4.00039V20.0004C23.1998 20.884 22.4835 21.6004 21.5998 21.6004H2.39981C1.51615 21.6004 0.799805 20.884 0.799805 20.0004V4.00039C0.799805 3.11673 1.51615 2.40039 2.3998 2.40039Z' stroke='%23010409'/%3E%3C/svg%3E%0A");
+    margin-right: 8px;
+}
+
+.footer__nav-words {
+    color: #73767D;
+    margin-bottom: 5px;
+}
+
+.footer__nav-socials-links {
+    display: flex;
+}
+
+.footer__nav-socials-links a {
+    margin-right: 20px;
+}
+
+.footer__nav-socials-links a:last-of-type {
+    margin-right: 0;
+}
+
+.footer__nav-payments-items {
+    display: flex;
+}
+
+.footer__nav-payments-items a {
+    margin-right: 20px;
+}
+
+.footer__nav-payments-items a:last-of-type {
+    margin-right: 0;
+}
+
+.footer .logo {
+    align-self: center;
+    margin-bottom: 25px;
+}
+
+.separator__wrapper_footer {
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.footer__privacy-policy {
+    padding-bottom: 25px;
+    padding-left: 45px;
+}
+
+.footer__small-text p {
+    font-size: 12px;
+    max-width: 1100px;
+    color: #73767D;
+    margin-bottom: 20px;
+}
+
+.footer__small-text p:last-child {
+    margin-bottom: 0;
+}
+
+/* footer end */
