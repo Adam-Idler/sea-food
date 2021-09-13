@@ -333,6 +333,7 @@ ul {
     background: #010409;
     color: #FEFEFE;
     display: flex;
+    position: relative;
 }
 
 @media (max-width: 1600px) {
@@ -816,5 +817,11 @@ ul {
 
 .section_call__btn {
     width: 190px;
+}
+
+.section_call__img {
+    position: absolute;
+    top: 30px;
+    right: 100px;
 }
 /* section-call end */
