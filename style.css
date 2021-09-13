@@ -98,6 +98,7 @@ button {
   font-weight: bold;
   font-size: 18px;
   color: #FEFEFE;
+  background-color: #266EDB;
   border: none;
   border-radius: 8px;
   outline: none;
@@ -323,6 +324,15 @@ ul {
 .section_stocks {
     padding-top: 120px;
     padding-bottom: 120px;
+}
+
+.section_call {
+    height: 420px;
+    padding-top: 65px;
+    padding-bottom: 65px;
+    background: #010409;
+    color: #FEFEFE;
+    display: flex;
 }
 
 @media (max-width: 1600px) {
@@ -705,3 +715,106 @@ ul {
 }
 
 /* button-show-more end */
+
+/* section-call start */
+
+.section_call__container {
+    width: 400px;
+    margin-right: 120px;
+}
+
+.section_call__uptitle {
+    color: #DB2626;
+    margin-bottom: 15px;
+}
+
+.section_call__title {
+    font-size: 48px;
+    margin-bottom: 25px;
+}
+
+.section_call__subtitle {
+    font-size: 22px;
+}
+
+.section_call__form {
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.input__wrapper {
+    position: relative;
+}
+
+.input__wrapper label {
+    position: absolute;
+    font-size: 12px;
+    top: -5px;
+    left: 16px;
+}
+
+#name, #phone {
+    width: 380px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    color: #FEFEFE;
+    padding: 16px;
+    background-color: #05142E;
+}
+
+#name::placeholder, #phone::placeholder {
+    color: #0B2D65;
+}
+
+.input__wrapper_checkbox span {
+    color: #73767D;
+    display: inline-block;
+    margin-left: 28px;
+    user-select: none;
+}
+
+.input__wrapper_checkbox span a {
+    color: #FBFCFE;
+    text-decoration: none;
+}
+
+#rules {
+    position: absolute;
+    align-self: left;
+    z-index: -1;
+    opacity: 0;
+}
+
+#rules + label {
+    position: relative;
+    color: #73767D;
+}
+
+#rules + label::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #FBFCFE;
+    border-radius: 4px;
+}
+
+#rules:checked + label::after {
+    content: '';
+    position: absolute;
+    top: -11px;
+    left: 5px;
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: #266EDB;
+    border-radius: 2px;
+}
+
+.section_call__btn {
+    width: 190px;
+}
+/* section-call end */
