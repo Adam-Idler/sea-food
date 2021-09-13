@@ -60,7 +60,7 @@
                     <h1 class="slider__words">
                         От тех, кто в море!
                     </h1>
-                    <button type="button" class="slider__button">
+                    <button type="button" class="btn slider__button">
                         Перейти в каталог
                     </button>
                 </div>
@@ -78,7 +78,7 @@
     </section>
 
     <section class="section section_stocks">
-        <h2 class="section__heading">
+        <h2 class="section__title">
             Акции
         </h2>
 
@@ -136,7 +136,9 @@
                     </footer>
                 </div>
                 <header class="product__header">
-                    <h3 class="product__name">Сельдь с/с 500 гр.</h3>
+                    <a href="#">
+                        <h3 class="product__name">Сельдь с/с 500 гр.</h3>
+                    </a>
                     <p class="product__weight">За 0,5 кг</p>
                 </header>
                 <footer class="product__footer">
@@ -193,7 +195,9 @@
                     </footer>
                 </div>
                 <header class="product__header">
-                    <h3 class="product__name">Устрицы Ромаринки</h3>
+                    <a href="#">
+                        <h3 class="product__name">Устрицы Ромаринки</h3>
+                    </a>
                     <p class="product__weight">За 3 шт.</p>
                 </header>
                 <footer class="product__footer">
@@ -251,7 +255,9 @@
                     </footer>
                 </div>
                 <header class="product__header">
-                    <h3 class="product__name">Устрицы Императорские</h3>
+                    <a href="#">
+                        <h3 class="product__name">Устрицы Императорские</h3>
+                    </a>
                     <p class="product__weight">За 3 шт.</p>
                 </header>
                 <footer class="product__footer">
@@ -308,7 +314,9 @@
                     </footer>
                 </div>
                 <header class="product__header">
-                    <h3 class="product__name">Креветка гребенчатая</h3>
+                    <a href="#">
+                        <h3 class="product__name">Креветка гребенчатая</h3>
+                    </a>
                     <p class="product__weight">За 1 кг</p>
                 </header>
                 <footer class="product__footer">
@@ -333,7 +341,7 @@
                     <input class="rate-button__hidden" type="radio" name="ratingd" id="5d">
                     <label class="rate-button__item rate-button__item_empty" for="5d"></label>
                 </div>
-                <div class="stocks__catalog-item-image-wrapper" style="background: url('./assets/catalog-images/4.jpg'); background-position: center; background-size: cover;">
+                <div class="stocks__catalog-item-image-wrapper" style="background: url('./assets/catalog-images/5.jpg'); background-position: center; background-size: cover;">
                     <header class="image-wrapper__header">
                         <div class="image-wrapper__label">Хит продаж</div>
                         <div class="favourite-product">
@@ -365,7 +373,9 @@
                     </footer>
                 </div>
                 <header class="product__header">
-                    <h3 class="product__name">Икра Кеты</h3>
+                    <a href="#">
+                        <h3 class="product__name">Икра Кеты</h3>
+                    </a>
                     <p class="product__weight">За 0,25 кг</p>
                 </header>
                 <footer class="product__footer">
@@ -422,7 +432,9 @@
                     </footer>
                 </div>
                 <header class="product__header">
-                    <h3 class="product__name">Юкола горбуши</h3>
+                    <a href="#">
+                        <h3 class="product__name">Юкола горбуши</h3>
+                    </a>
                     <p class="product__weight">За 0,2 кг</p>
                 </header>
                 <footer class="product__footer">
@@ -443,9 +455,9 @@
 
     <section class="section section_call">
         <div class="section_call__container">
-            <p class="section_call__uptitle">Помощь с выбором</p>
-            <h2 class="section_call__title">Не знаете, что выбрать?</h2>
-            <p class="section_call__subtitle">Наш менеджер свяжется с вами в течении 30 минут!</p>
+            <p class="section__uptitle section_call__uptitle">Помощь с выбором</p>
+            <h2 class="section__title section__title_white">Не знаете, что выбрать?</h2>
+            <p class="section__subtitle section__subtitle_white">Наш менеджер свяжется с вами в течении 30 минут!</p>
         </div>
         <form action="/" class="section_call__form">
             <div class="input__wrapper">
@@ -468,9 +480,87 @@
                 <span>Согласен с условиями <a href="#">Правил пользования торговой площадкой</a> и <a href="#">правилами возврата</a></span>
             </div>
             
-            <button type="submit" class="section_call__btn">Отправить</button>
+            <button type="submit" class="btn">Отправить</button>
         </form>
         <img src="./assets/pattern.png" alt="pattern" class="section_call__img">
+    </section>
+
+    <section class="section section_news">
+        <p class="section__uptitle">Полезные новости</p>
+        <h2 class="section__title">Лучшие новости и рецепты</h2>
+
+        <div class="slider_news">
+            <div class="slider_news__item">
+                <div class="slider_news__img-wrapper">
+                    <a href="" class="slider_news__img-link">
+                        <img src="./assets/slider-news-images/1.jpg" alt="" class="slider_news__img">
+                    </a>
+                </div>
+                <a href="#" class="slider_news__title-link">
+                    <h2 >Скидки по вторникам</h2>
+                </a>
+                <p class="slider_news__subtitle">-10% на морепродукты</p>
+                <a href="#" class="slider_news__read-more">Читать далее >></a>
+            </div>
+            <div class="slider_news__item">
+                <div class="slider_news__img-wrapper">
+                    <a href="" class="slider_news__img-link">
+                        <img src="./assets/slider-news-images/2.jpg" alt="" class="slider_news__img">
+                    </a>
+                </div>
+                <a href="#" class="slider_news__title-link">
+                    <h2>Скидки по вторникам</h2>
+                </a>
+                <p class="slider_news__subtitle">-10% на морепродукты</p>
+                <a href="#" class="slider_news__read-more">Читать далее >></a>
+            </div>
+            <div class="slider_news__item">
+                <div class="slider_news__img-wrapper">
+                    <a href="" class="slider_news__img-link">
+                        <img src="./assets/slider-news-images/3.jpg" alt="" class="slider_news__img">
+                    </a>
+                </div>
+                <a href="#" class="slider_news__title-link">
+                    <h2>Скидки по вторникам</h2>
+                </a>
+                <p class="slider_news__subtitle">-10% на морепродукты</p>
+                <a href="#" class="slider_news__read-more">Читать далее >></a>
+            </div>
+                <div class="slider_news__arrow slider_news__arrow_left"></div>
+                <div class="slider_news__arrow slider_news__arrow_right"></div>
+        </div>
+
+        <button type="button" class="btn">Читать весь блог</button>
+        <img src="./assets/fish.png" alt="fish" class="section_news__fish">
+    </section>
+
+    <section class="section section_gift">
+        <div class="section_gift__left-side">
+            <h2 class="section__title section__title_white">Дарим 500 ₽ на первый заказ!</h2>
+            <p class="section__subtitle">Зарезервируйте скидку* сейчас и мы поможем оформить ваш заказ.</p>
+            <small class="section_gift__explanation">*скидка привязывается к номеру телефона</small>
+
+            <form action="/" class="section_gift__send-email">
+                <input type="email" placeholder="Введите Ваш e-mail" class="send-email__input">
+                <button type="submit" class="send-email__button">Подписаться</button>
+            </form>
+
+            <p class="section_gift__approval">
+                Нажимая кнопку «Подписаться», я даю свое согласие на обработку моих персональных данных.
+            </p>
+        </div>
+
+        <div class="section_gift__advantages">
+            <div class="section_gift__advantages-item">
+                <span>Уведомление о статусах заказов</span>
+            </div>
+            <div class="section_gift__advantages-item">
+                <span>Личный менеджер</span>
+            </div>
+            <div class="section_gift__advantages-item">
+                <span>Самые выгодные предложения</span>
+            </div>
+        </div>
     </section>
 </body>
 </html>
