@@ -289,6 +289,13 @@ ul {
     padding-bottom: 0;
 }
 
+.section_not-found {
+    padding-bottom: 270px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
 .section__title {
     font-size: 48px;
     font-weight: 700;
@@ -1821,3 +1828,34 @@ ul {
 }
 
 /* section_contacts end */
+
+/* section-not-fount start */
+.error__title {
+    color: #DB2626;
+    font-size: 64px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    line-height: 72px;
+}
+
+.error__title span {
+    font-size: 300px;
+}
+
+.error__subtitle {
+    font-size: 32px;
+    color: #73767D;
+    max-width: 650px;
+    margin-bottom: 50px;
+}
+
+.section_not-found .btn {
+    width: 380px;
+}
+
+.section_not-found__img {
+    position: absolute;
+    top: 300px;
+    right: 500px;
+}
+/* section-not-fount end */
