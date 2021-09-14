@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="../assets/favicons/favicon.svg">
+    <link rel="icon" type="image/png" href="../assets/favicons/favicon.png">
+    <link rel="stylesheet" href="../style.css">
+    <title>Seafish</title>
+</head>
+<body>
+    <header class="section header">
+        <nav class="header__nav">
+            <div class="header__nav-wrapper_left">
+                <a href="#" class="header__nav-link">О нас</a>
+                <a href="#" class="header__nav-link">Доставка и оплата</a>
+            </div>
+            <a href="#" class="logo">
+                <img src="../assets/logo.png" alt="Logo">
+            </a>
+            <div class="header__nav-wrapper_right">
+                <a href="#" class="header__nav-link header__nav-link_stocks">
+                    Акции
+                </a>
+                <a href="#" class="header__nav-link favourite">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.9998 21.6L11.6462 21.9536C11.74 22.0473 11.8672 22.1 11.9998 22.1C12.1324 22.1 12.2596 22.0473 12.3534 21.9536L11.9998 21.6ZM2.45666 12.0569L2.1031 12.4104H2.1031L2.45666 12.0569ZM10.4567 4.05688L10.1031 4.41043L10.4567 4.05688ZM11.9998 5.60002L11.6462 5.95358C11.8415 6.14884 12.1581 6.14884 12.3534 5.95358L11.9998 5.60002ZM13.5429 4.05688L13.1894 3.70332V3.70332L13.5429 4.05688ZM12.3534 21.2465L2.81021 11.7033L2.1031 12.4104L11.6462 21.9536L12.3534 21.2465ZM21.1894 11.7033L11.6462 21.2465L12.3534 21.9536L21.8965 12.4104L21.1894 11.7033ZM10.1031 4.41043L11.6462 5.95358L12.3534 5.24647L10.8102 3.70333L10.1031 4.41043ZM12.3534 5.95358L13.8965 4.41043L13.1894 3.70332L11.6462 5.24647L12.3534 5.95358ZM17.5429 1.90002C15.91 1.90002 14.344 2.54869 13.1894 3.70332L13.8965 4.41043C14.8636 3.44333 16.1753 2.90002 17.5429 2.90002V1.90002ZM22.6998 8.05688C22.6998 9.42456 22.1565 10.7362 21.1894 11.7033L21.8965 12.4104C23.0511 11.2558 23.6998 9.68978 23.6998 8.05688H22.6998ZM23.6998 8.05688C23.6998 4.65654 20.9433 1.90002 17.5429 1.90002V2.90002C20.391 2.90002 22.6998 5.20883 22.6998 8.05688H23.6998ZM6.45666 2.90002C7.82434 2.90002 9.13601 3.44333 10.1031 4.41043L10.8102 3.70333C9.65558 2.54869 8.08956 1.90002 6.45666 1.90002V2.90002ZM1.2998 8.05688C1.2998 5.20883 3.60861 2.90002 6.45666 2.90002V1.90002C3.05632 1.90002 0.299805 4.65654 0.299805 8.05688H1.2998ZM2.81021 11.7033C1.84311 10.7362 1.2998 9.42456 1.2998 8.05688H0.299805C0.299805 9.68978 0.948469 11.2558 2.1031 12.4104L2.81021 11.7033Z" fill="#010409"/>
+                    </svg>
+                </a>
+                <a href="#" class="header__nav-link cart">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.91816 23.0368L4.36538 22.8132H4.36538L3.91816 23.0368ZM20.0814 23.0368L20.5287 23.2604L20.5287 23.2604L20.0814 23.0368ZM1.12492 9.30005H22.8747V8.30005H1.12492V9.30005ZM22.6998 9.12516V9.82718H23.6998V9.12516H22.6998ZM19.8173 22.7H4.18236V23.7H19.8173V22.7ZM1.2998 9.82718V9.12516H0.299805V9.82718H1.2998ZM4.36538 22.8132C2.34937 18.7811 1.2998 14.3351 1.2998 9.82718H0.299805C0.299805 14.4904 1.38551 19.0895 3.47095 23.2604L4.36538 22.8132ZM4.18236 22.7C4.25986 22.7 4.33072 22.7438 4.36538 22.8132L3.47095 23.2604C3.60568 23.5298 3.88109 23.7 4.18236 23.7V22.7ZM19.6342 22.8132C19.6689 22.7438 19.7397 22.7 19.8173 22.7V23.7C20.1185 23.7 20.3939 23.5298 20.5287 23.2604L19.6342 22.8132ZM22.6998 9.82718C22.6998 14.3351 21.6502 18.7811 19.6342 22.8132L20.5287 23.2604C22.6141 19.0895 23.6998 14.4904 23.6998 9.82718H22.6998ZM22.8747 9.30005C22.7781 9.30005 22.6998 9.22175 22.6998 9.12516H23.6998C23.6998 8.66947 23.3304 8.30005 22.8747 8.30005V9.30005ZM1.12492 8.30005C0.66922 8.30005 0.299805 8.66946 0.299805 9.12516H1.2998C1.2998 9.22175 1.22151 9.30005 1.12492 9.30005V8.30005ZM6.02855 9.0573L10.8286 1.0573L9.97106 0.542801L5.17106 8.5428L6.02855 9.0573ZM13.1711 1.0573L17.9711 9.0573L18.8285 8.5428L14.0285 0.542801L13.1711 1.0573Z" fill="#010409"/>
+                    </svg>
+                </a>
+            </div>
+        </nav>
+        <form class="searcher">
+            <input type="text" placeholder="Введите название продукта" class="searcher__input">
+        </form>
+    </header>
+
+    <section class="section section_product">
+        <div class="page__navigation">
+            <a href="#" class="page__navigation-item">
+                Главная
+            </a href="#">
+            <a href="#" class="page__navigation-item">
+                Каталог
+            </a href="#">
+            <a href="#" class="page__navigation-item">
+                Рыба
+            </a href="#">
+            <a href="#" class="page__navigation-item page__navigation-item_active">
+                Сельдь с/с 500 гр.
+            </a href="#">
+        </div>
+
+        <div class="product__wrapper">
+            <div class="product__image-wrapper" style="background: url('../assets/catalog-images/1.jpg'); background-position: center; background-size: cover;">
+                <header class="image-wrapper__header product__image-wrapper__header">
+                    <div class="image-wrapper__label product__image-wrapper__label">
+                        Хит продаж
+                    </div>
+
+                    <div class="image-wrapper__icons product__image-wrapper__icons">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.9998 21.6L11.6462 21.9536C11.74 22.0473 11.8672 22.1 11.9998 22.1C12.1324 22.1 12.2596 22.0473 12.3534 21.9536L11.9998 21.6ZM2.45666 12.0569L2.1031 12.4104H2.1031L2.45666 12.0569ZM10.4567 4.05688L10.1031 4.41043L10.4567 4.05688ZM11.9998 5.60002L11.6462 5.95358C11.8415 6.14884 12.1581 6.14884 12.3534 5.95358L11.9998 5.60002ZM13.5429 4.05688L13.1894 3.70332V3.70332L13.5429 4.05688ZM12.3534 21.2465L2.81021 11.7033L2.1031 12.4104L11.6462 21.9536L12.3534 21.2465ZM21.1894 11.7033L11.6462 21.2465L12.3534 21.9536L21.8965 12.4104L21.1894 11.7033ZM10.1031 4.41043L11.6462 5.95358L12.3534 5.24647L10.8102 3.70333L10.1031 4.41043ZM12.3534 5.95358L13.8965 4.41043L13.1894 3.70332L11.6462 5.24647L12.3534 5.95358ZM17.5429 1.90002C15.91 1.90002 14.344 2.54869 13.1894 3.70332L13.8965 4.41043C14.8636 3.44333 16.1753 2.90002 17.5429 2.90002V1.90002ZM22.6998 8.05688C22.6998 9.42456 22.1565 10.7362 21.1894 11.7033L21.8965 12.4104C23.0511 11.2558 23.6998 9.68978 23.6998 8.05688H22.6998ZM23.6998 8.05688C23.6998 4.65654 20.9433 1.90002 17.5429 1.90002V2.90002C20.391 2.90002 22.6998 5.20883 22.6998 8.05688H23.6998ZM6.45666 2.90002C7.82434 2.90002 9.13601 3.44333 10.1031 4.41043L10.8102 3.70333C9.65558 2.54869 8.08956 1.90002 6.45666 1.90002V2.90002ZM1.2998 8.05688C1.2998 5.20883 3.60861 2.90002 6.45666 2.90002V1.90002C3.05632 1.90002 0.299805 4.65654 0.299805 8.05688H1.2998ZM2.81021 11.7033C1.84311 10.7362 1.2998 9.42456 1.2998 8.05688H0.299805C0.299805 9.68978 0.948469 11.2558 2.1031 12.4104L2.81021 11.7033Z" fill="#FEFEFE"/>
+                        </svg>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.99935 10.0001L11.3327 10.0001M14.666 5.33341L11.3327 9.99397L14.666 14.6667M19.3327 3.33168C19.3327 4.80272 18.138 5.9966 16.666 5.9966C15.194 5.9966 13.9993 4.80272 13.9993 3.33168C13.9993 1.86064 15.194 0.666748 16.666 0.666748C18.138 0.666748 19.3327 1.86064 19.3327 3.33168ZM19.3327 16.6563C19.3327 18.1273 18.138 19.3212 16.666 19.3212C15.194 19.3212 13.9993 18.1273 13.9993 16.6563C13.9993 15.1853 15.194 13.9914 16.666 13.9914C18.138 13.9914 19.3327 15.1853 19.3327 16.6563ZM5.99935 9.99399C5.99935 11.465 4.80468 12.6589 3.33268 12.6589C1.86068 12.6589 0.666016 11.465 0.666016 9.99399C0.666016 8.52295 1.86068 7.32906 3.33268 7.32906C4.80468 7.32906 5.99935 8.52295 5.99935 9.99399Z" stroke="#FEFEFE" stroke-linecap="square"/>
+                        </svg>
+                    </div>
+                </header>
+
+                <div class="mini-images">
+                    <div class="mini-images__item mini-images__item_active" style="background: url('../assets/catalog-images/1.jpg'); background-position: center; background-size: cover;"></div>
+                    <div class="mini-images__item" style="background: url('../assets/catalog-images/1.jpg'); background-position: center; background-size: cover;"></div>
+                    <div class="mini-images__item" style="background: url('../assets/catalog-images/1.jpg'); background-position: center; background-size: cover;"></div>
+                </div>
+            </div>
+
+            <div class="product-info">
+                <h3>Сельдь с/с 500 гр.</h3>
+                <div class="product-info__rating-wrapper">
+                    <div class="rate-button">
+                        <input class="rate-button__hidden" type="radio" name="ratingb" id="1b" checked>
+                        <label class="rate-button__item rate-button__item_empty" for="1b"></label>
+                        <input class="rate-button__hidden" type="radio" name="ratingb" id="2b">
+                        <label class="rate-button__item rate-button__item_empty" for="2b"></label>
+                        <input class="rate-button__hidden" type="radio" name="ratingb" id="3b">
+                        <label class="rate-button__item rate-button__item_empty" for="3b"></label>
+                        <input class="rate-button__hidden" type="radio" name="ratingb" id="4b">
+                        <label class="rate-button__item rate-button__item_empty" for="4b"></label>
+                        <input class="rate-button__hidden" type="radio" name="ratingb" id="5b">
+                        <label class="rate-button__item rate-button__item_empty" for="5b"></label>
+                        <p class="product__count-of-reviews">53</p>
+                    </div>
+                    <div class="product__info__buy-count">
+                        Купили <b>143</b> раза!
+                    </div>
+                </div>
+                
+                <div class="product-info__price">
+                    <span class="product__old-price">218,70 ₽</span>
+                    <span class="product-info__current-price">118,40 ₽</span>
+                    <span class="product-info__weight-words">Цена за&nbsp;</span><span class="product-info__weight">500 грамм</span>
+                </div>
+                <div class="product__footer">
+                    <button class="btn">Купить</button>
+                    <p class="product__in-stock">Есть на складе!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section_tabs">
+        <div class="section_tabs__tabs-list">
+            <div class="section_tabs__tabs-item section_tabs__tabs-item_active">О товаре</div>
+            <div class="section_tabs__tabs-item">Отзывы(<span class="tabs__review-count">53</span>)</div>
+            <div class="section_tabs__tabs-item">Вопросы(<span class="tabs__question-count">53</span>)</div>
+        </div>
+        <div class="section_tabs__tabs-item-values">
+            <div class="section_tabs__tabs-item-value section_tabs__tabs-item-value_1">
+                <h4 class="tabs__info">Общая информация:</h4>
+                <div class="tab__information-block">
+                    <span class="tab__information-name">Производитель:&nbsp;</span> 
+                    <span class="tab__information-value">ООО «Мореодор»</span>
+                </div>
+                <div class="tab__information-block">
+                    <span class="tab__information-name">Страна производства:&nbsp;</span> 
+                    <span class="tab__information-value">Россия</span>
+                </div>
+                <div class="tab__information-block">
+                    <span class="tab__information-name">Вес:&nbsp;</span> 
+                    <span class="tab__information-value">500 гр.</span>
+                </div>
+
+                <span class="tab__information-name tab__information-name_nutritional">Пищевая ценность на <b>100</b> грамм:</span>
+                <div class="product__nutritional-value">
+                    <div class="product__nutritional-item">
+                        <div class="nutritional-name">Белки</div>
+                        <div class="nutritional-value">17,5 г.</div>
+                    </div>
+                    <div class="product__nutritional-item">
+                        <div class="nutritional-name">Жиры</div>
+                        <div class="nutritional-value">2 г.</div>
+                    </div>
+                    <div class="product__nutritional-item">
+                        <div class="nutritional-name">Углеводы</div>
+                        <div class="nutritional-value">0</div>
+                    </div>
+                </div>
+            </div>
+            <div class="section_tabs__tabs-item-value section_tabs__tabs-item-value_2">
+
+            </div>
+            <div class="section_tabs__tabs-item-value section_tabs__tabs-item-value_3">
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section section_feedback">
+        <p class="section__uptitle">Отзывы</p>
+        <h2 class="section__title">
+            О нас говорят
+            <button class="section_feedback__button">
+                Оставить отзыв
+            </button>
+        </h2>
+
+        <div class="section_feedback-slider">
+            <div class="section_feedback-slider-item">
+                <header class="comment__header">
+                    <div class="comment__name">Светлана</div>
+                    <div class="comment__date">15 июля 2021г. </div>
+                </header>
+                <p class="comment__text">
+                    Всегда вежливый, аккуратный ,доброжелательный! Спасибо!
+                </p>
+            </div>
+            <div class="section_feedback-slider-item">
+                <header class="comment__header">
+                    <div class="comment__name">Владимир</div>
+                    <div class="comment__date">12 марта 2021г.</div>
+                </header>
+                <p class="comment__text">
+                    Благодарим за доставку! Все аккуратно и точно по чеку...;))
+                </p>
+            </div>
+            <div class="section_feedback-slider-item">
+                <header class="comment__header">
+                    <div class="comment__name">Константин</div>
+                    <div class="comment__date">9 сентября 2020г.</div>
+                </header>
+                <p class="comment__text">
+                    Все ок. !
+                </p>
+            </div>
+            <div class="slider_news__arrow slider_news__arrow_left"></div>
+            <div class="slider_news__arrow slider_news__arrow_right"></div>
+        </div>
+        <button class="btn">Все отзывы</button>
+    </section>
+
+    <section class="section section_advantages">
+        <div class="section_advantages__item">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M35.9997 20.0002H3.99968M35.9997 20.0002C37.4724 20.0002 38.6663 18.8063 38.6663 17.3335V14.6668C38.6663 13.1941 37.4724 12.0002 35.9997 12.0002H3.99967C2.52692 12.0002 1.33301 13.1941 1.33301 14.6668V17.3335C1.33301 18.8063 2.52692 20.0002 3.99968 20.0002M35.9997 20.0002V33.3335C35.9997 36.279 33.6119 38.6668 30.6663 38.6668H9.33301C6.38749 38.6668 3.99967 36.279 3.99967 33.3335L3.99968 20.0002M19.9997 12.0002V9.3335M19.9997 12.0002H11.2378C8.71304 12.0002 6.66634 9.95346 6.66634 7.42873V6.66683C6.66634 3.72131 9.05416 1.3335 11.9997 1.3335C16.418 1.3335 19.9997 4.91522 19.9997 9.3335M19.9997 12.0002H28.7616C31.2863 12.0002 33.333 9.95346 33.333 7.42873V6.66683C33.333 3.72131 30.9452 1.3335 27.9997 1.3335C23.5814 1.3335 19.9997 4.91522 19.9997 9.3335M19.9997 12.0002V38.6668" stroke="#FEFEFE"/>
+            </svg>
+            <p class="section_advantages__text">Бесплатная доставка</p>
+        </div>
+        <div class="section_advantages__item">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.33398 14.6666L8.91215 14.3981L8.83398 14.521V14.6666H9.33398ZM16.5276 3.36232L16.9494 3.63076L16.5276 3.36232ZM23.6394 7.38898L23.1922 7.16537V7.16537L23.6394 7.38898ZM20.0007 14.6666L19.5534 14.443C19.4759 14.598 19.4842 14.782 19.5753 14.9294C19.6664 15.0768 19.8274 15.1666 20.0007 15.1666V14.6666ZM38.6673 27.9999L39.0673 28.2999L39.1673 28.1666V27.9999H38.6673ZM32.2673 36.5332L32.6673 36.8332L32.2673 36.5332ZM22.0849 2.05043L22.3421 1.62168V1.62168L22.0849 2.05043ZM0.833984 13.3332V39.9999H1.83398V13.3332H0.833984ZM9.75581 14.935L16.9494 3.63076L16.1058 3.09388L8.91215 14.3981L9.75581 14.935ZM23.1922 7.16537L19.5534 14.443L20.4479 14.8902L24.0867 7.61258L23.1922 7.16537ZM20.0007 15.1666H33.334V14.1666H20.0007V15.1666ZM38.1673 19.9999V27.9999H39.1673V19.9999H38.1673ZM38.2673 27.6999L31.8673 36.2332L32.6673 36.8332L39.0673 28.2999L38.2673 27.6999ZM28.0006 38.1666H14.6673V39.1666H28.0006V38.1666ZM9.83398 33.3332V14.6666H8.83398V33.3332H9.83398ZM33.334 15.1666C36.0034 15.1666 38.1673 17.3305 38.1673 19.9999H39.1673C39.1673 16.7782 36.5556 14.1666 33.334 14.1666V15.1666ZM14.6673 38.1666C11.9979 38.1666 9.83398 36.0026 9.83398 33.3332H8.83398C8.83398 36.5549 11.4457 39.1666 14.6673 39.1666V38.1666ZM21.8276 2.47917C23.437 3.44479 24.0316 5.48669 23.1922 7.16537L24.0867 7.61258C25.1597 5.46653 24.3995 2.85614 22.3421 1.62168L21.8276 2.47917ZM31.8673 36.2332C30.9545 37.4503 29.522 38.1666 28.0006 38.1666V39.1666C29.8367 39.1666 31.5657 38.3021 32.6673 36.8332L31.8673 36.2332ZM16.9494 3.63076C17.9947 1.98826 20.1582 1.47752 21.8276 2.47917L22.3421 1.62168C20.2079 0.341147 17.442 0.994086 16.1058 3.09388L16.9494 3.63076Z" fill="#FEFEFE"/>
+            </svg>
+            <p class="section_advantages__text">Отличное <br> качество продуктов</p>  
+        </div>
+        <div class="section_advantages__item">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.334 14.6668H16.0007M24.0006 25.3335H26.6673M26.6673 13.3335L13.334 26.6668M18.1379 2.10509L15.1271 5.11581C14.6331 5.60985 13.963 5.8874 13.2644 5.8874H8.52227C7.06734 5.8874 5.88789 7.06686 5.88789 8.52178V13.2639C5.88789 13.9625 5.61034 14.6326 5.1163 15.1267L2.10558 18.1374C1.07679 19.1662 1.07679 20.8342 2.10558 21.863L5.1163 24.8737C5.61034 25.3677 5.88789 26.0378 5.88789 26.7365V31.4785C5.88789 32.9335 7.06734 34.1129 8.52227 34.1129H13.2644C13.963 34.1129 14.6331 34.3905 15.1271 34.8845L18.1379 37.8952C19.1666 38.924 20.8346 38.924 21.8634 37.8952L24.8742 34.8845C25.3682 34.3905 26.0383 34.1129 26.7369 34.1129H31.479C32.934 34.1129 34.1134 32.9335 34.1134 31.4785V26.7365C34.1134 26.0378 34.391 25.3677 34.885 24.8737L37.8957 21.863C38.9245 20.8342 38.9245 19.1662 37.8957 18.1374L34.885 15.1267C34.391 14.6326 34.1134 13.9625 34.1134 13.2639V8.52178C34.1134 7.06686 32.934 5.8874 31.479 5.8874H26.7369C26.0383 5.8874 25.3682 5.60985 24.8742 5.11581L21.8634 2.10509C20.8346 1.0763 19.1667 1.0763 18.1379 2.10509Z" stroke="#FEFEFE"/>
+            </svg>
+            <p class="section_advantages__text">Скидки постоянным клиентам</p>
+        </div>
+    </section>
+
+    <section class="section section_rules">
+        <h2 class="section__title">Заказы принимаются</h2>
+        
+        <ul class="section_rules-list">
+            <li class="section_rules-list-item">
+                Открытые устрицы доставляются только в составе сетов. Вы можете добавить необходимое количество устриц из каталога к сету, который выберете;
+            </li>
+            <li class="section_rules-list-item">
+                Российские устрицы вне сетов доставляются закрытыми в упаковке по 6 шт.;
+
+            </li>
+            <li class="section_rules-list-item">
+                Импортные устрицы вне сетов доставляются закрытыми;
+            </li>
+            <li class="section_rules-list-item">
+                Минимальный заказ для доставки — 1 000 ₽ без учета стоимости доставки;
+            </li>
+            <li class="section_rules-list-item">
+                При заказе от 5 000 ₽ — доставка бесплатно.
+            </li>
+        </ul>
+
+        <img src="../assets/pattern.png" alt="fish" class="section_rules__img">
+    </section>
+
+    <section class="section section_reccomendation">
+        <p class="section__uptitle">Другие покупатели</p>
+        <h2 class="section__title">С этим товаром покупают</h2>
+
+        <div class="section_reccomendation__products">
+            <div class="stocks__catalog-item stocks__catalog-item_reccomendation">
+                <div class="stocks__catalog-item-image-wrapper" style="background: url('../assets/catalog-images/4.jpg'); background-position: center; background-size: cover;">
+                    <header class="image-wrapper__header">
+                        <div class="image-wrapper__label">Акция</div>
+                        <div class="favourite-product">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.9998 21.6L11.6462 21.9536C11.74 22.0473 11.8672 22.1 11.9998 22.1C12.1324 22.1 12.2596 22.0473 12.3534 21.9536L11.9998 21.6ZM2.45666 12.0569L2.1031 12.4104H2.1031L2.45666 12.0569ZM10.4567 4.05688L10.1031 4.41043L10.4567 4.05688ZM11.9998 5.60002L11.6462 5.95358C11.8415 6.14884 12.1581 6.14884 12.3534 5.95358L11.9998 5.60002ZM13.5429 4.05688L13.1894 3.70332V3.70332L13.5429 4.05688ZM12.3534 21.2465L2.81021 11.7033L2.1031 12.4104L11.6462 21.9536L12.3534 21.2465ZM21.1894 11.7033L11.6462 21.2465L12.3534 21.9536L21.8965 12.4104L21.1894 11.7033ZM10.1031 4.41043L11.6462 5.95358L12.3534 5.24647L10.8102 3.70333L10.1031 4.41043ZM12.3534 5.95358L13.8965 4.41043L13.1894 3.70332L11.6462 5.24647L12.3534 5.95358ZM17.5429 1.90002C15.91 1.90002 14.344 2.54869 13.1894 3.70332L13.8965 4.41043C14.8636 3.44333 16.1753 2.90002 17.5429 2.90002V1.90002ZM22.6998 8.05688C22.6998 9.42456 22.1565 10.7362 21.1894 11.7033L21.8965 12.4104C23.0511 11.2558 23.6998 9.68978 23.6998 8.05688H22.6998ZM23.6998 8.05688C23.6998 4.65654 20.9433 1.90002 17.5429 1.90002V2.90002C20.391 2.90002 22.6998 5.20883 22.6998 8.05688H23.6998ZM6.45666 2.90002C7.82434 2.90002 9.13601 3.44333 10.1031 4.41043L10.8102 3.70333C9.65558 2.54869 8.08956 1.90002 6.45666 1.90002V2.90002ZM1.2998 8.05688C1.2998 5.20883 3.60861 2.90002 6.45666 2.90002V1.90002C3.05632 1.90002 0.299805 4.65654 0.299805 8.05688H1.2998ZM2.81021 11.7033C1.84311 10.7362 1.2998 9.42456 1.2998 8.05688H0.299805C0.299805 9.68978 0.948469 11.2558 2.1031 12.4104L2.81021 11.7033Z" fill="#FEFEFE"/>
+                            </svg>
+                        </div>
+                    </header>
+                </div>
+                <header class="product__header">
+                    <a href="#">
+                        <h3 class="product__name">Креветка гребенчатая</h3>
+                    </a>
+                    <p class="product__weight">За 1 кг</p>
+                </header>
+                <footer class="product__footer">
+                    <div class="product__price">
+                        <span class="product__price-digit">2 500</span>
+                        <span class="product__price-currency">₽</span>
+                    </div>
+                    <button class="product__cart-button">В корзину</button>
+                </footer>
+                <div class="stocks-product__info">
+                    <a href="#" class="stocks-product__info-item">
+                        О товаре
+                    </a>
+                    <a href="#" class="stocks-product__info-item stocks-product__info-item_reviews">
+                        Отзывы (<span class="stocks-product__reviews-count">565</span>)
+                    </a>
+                    <a href="#" class="stocks-product__info-item">
+                        Вопросы (<span class="stocks-product__question-count">17</span>)
+                    </a>
+                </div>
+            </div>
+
+            <div class="stocks__catalog-item stocks__catalog-item_reccomendation">
+                <div class="stocks__catalog-item-image-wrapper" style="background: url('../assets/catalog-images/5.jpg'); background-position: center; background-size: cover;">
+                    <header class="image-wrapper__header">
+                        <div class="favourite-product">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.9998 21.6L11.6462 21.9536C11.74 22.0473 11.8672 22.1 11.9998 22.1C12.1324 22.1 12.2596 22.0473 12.3534 21.9536L11.9998 21.6ZM2.45666 12.0569L2.1031 12.4104H2.1031L2.45666 12.0569ZM10.4567 4.05688L10.1031 4.41043L10.4567 4.05688ZM11.9998 5.60002L11.6462 5.95358C11.8415 6.14884 12.1581 6.14884 12.3534 5.95358L11.9998 5.60002ZM13.5429 4.05688L13.1894 3.70332V3.70332L13.5429 4.05688ZM12.3534 21.2465L2.81021 11.7033L2.1031 12.4104L11.6462 21.9536L12.3534 21.2465ZM21.1894 11.7033L11.6462 21.2465L12.3534 21.9536L21.8965 12.4104L21.1894 11.7033ZM10.1031 4.41043L11.6462 5.95358L12.3534 5.24647L10.8102 3.70333L10.1031 4.41043ZM12.3534 5.95358L13.8965 4.41043L13.1894 3.70332L11.6462 5.24647L12.3534 5.95358ZM17.5429 1.90002C15.91 1.90002 14.344 2.54869 13.1894 3.70332L13.8965 4.41043C14.8636 3.44333 16.1753 2.90002 17.5429 2.90002V1.90002ZM22.6998 8.05688C22.6998 9.42456 22.1565 10.7362 21.1894 11.7033L21.8965 12.4104C23.0511 11.2558 23.6998 9.68978 23.6998 8.05688H22.6998ZM23.6998 8.05688C23.6998 4.65654 20.9433 1.90002 17.5429 1.90002V2.90002C20.391 2.90002 22.6998 5.20883 22.6998 8.05688H23.6998ZM6.45666 2.90002C7.82434 2.90002 9.13601 3.44333 10.1031 4.41043L10.8102 3.70333C9.65558 2.54869 8.08956 1.90002 6.45666 1.90002V2.90002ZM1.2998 8.05688C1.2998 5.20883 3.60861 2.90002 6.45666 2.90002V1.90002C3.05632 1.90002 0.299805 4.65654 0.299805 8.05688H1.2998ZM2.81021 11.7033C1.84311 10.7362 1.2998 9.42456 1.2998 8.05688H0.299805C0.299805 9.68978 0.948469 11.2558 2.1031 12.4104L2.81021 11.7033Z" fill="#FEFEFE"/>
+                            </svg>
+                        </div>
+                    </header>
+                </div>
+                <header class="product__header">
+                    <a href="#">
+                        <h3 class="product__name">Икра Кеты</h3>
+                    </a>
+                    <p class="product__weight">За 0,25 кг</p>
+                </header>
+                <footer class="product__footer">
+                    <div class="product__price">
+                        <span class="product__price-digit">1 500</span>
+                        <span class="product__price-currency">₽</span>
+                    </div>
+                    <button class="product__cart-button">В корзину</button>
+                </footer>
+                <div class="stocks-product__info">
+                    <a href="#" class="stocks-product__info-item">
+                        О товаре
+                    </a>
+                    <a href="#" class="stocks-product__info-item stocks-product__info-item_reviews">
+                        Отзывы (<span class="stocks-product__reviews-count">565</span>)
+                    </a>
+                    <a href="#" class="stocks-product__info-item">
+                        Вопросы (<span class="stocks-product__question-count">17</span>)
+                    </a>
+                </div>
+            </div>
+
+            <div class="stocks__catalog-item stocks__catalog-item_reccomendation">
+                <div class="stocks__catalog-item-image-wrapper" style="background: url('../assets/catalog-images/6.jpg'); background-position: center; background-size: cover;">
+                    <header class="image-wrapper__header">
+                        <div class="image-wrapper__label">Хит продаж</div>
+                        <div class="favourite-product">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.9998 21.6L11.6462 21.9536C11.74 22.0473 11.8672 22.1 11.9998 22.1C12.1324 22.1 12.2596 22.0473 12.3534 21.9536L11.9998 21.6ZM2.45666 12.0569L2.1031 12.4104H2.1031L2.45666 12.0569ZM10.4567 4.05688L10.1031 4.41043L10.4567 4.05688ZM11.9998 5.60002L11.6462 5.95358C11.8415 6.14884 12.1581 6.14884 12.3534 5.95358L11.9998 5.60002ZM13.5429 4.05688L13.1894 3.70332V3.70332L13.5429 4.05688ZM12.3534 21.2465L2.81021 11.7033L2.1031 12.4104L11.6462 21.9536L12.3534 21.2465ZM21.1894 11.7033L11.6462 21.2465L12.3534 21.9536L21.8965 12.4104L21.1894 11.7033ZM10.1031 4.41043L11.6462 5.95358L12.3534 5.24647L10.8102 3.70333L10.1031 4.41043ZM12.3534 5.95358L13.8965 4.41043L13.1894 3.70332L11.6462 5.24647L12.3534 5.95358ZM17.5429 1.90002C15.91 1.90002 14.344 2.54869 13.1894 3.70332L13.8965 4.41043C14.8636 3.44333 16.1753 2.90002 17.5429 2.90002V1.90002ZM22.6998 8.05688C22.6998 9.42456 22.1565 10.7362 21.1894 11.7033L21.8965 12.4104C23.0511 11.2558 23.6998 9.68978 23.6998 8.05688H22.6998ZM23.6998 8.05688C23.6998 4.65654 20.9433 1.90002 17.5429 1.90002V2.90002C20.391 2.90002 22.6998 5.20883 22.6998 8.05688H23.6998ZM6.45666 2.90002C7.82434 2.90002 9.13601 3.44333 10.1031 4.41043L10.8102 3.70333C9.65558 2.54869 8.08956 1.90002 6.45666 1.90002V2.90002ZM1.2998 8.05688C1.2998 5.20883 3.60861 2.90002 6.45666 2.90002V1.90002C3.05632 1.90002 0.299805 4.65654 0.299805 8.05688H1.2998ZM2.81021 11.7033C1.84311 10.7362 1.2998 9.42456 1.2998 8.05688H0.299805C0.299805 9.68978 0.948469 11.2558 2.1031 12.4104L2.81021 11.7033Z" fill="#FEFEFE"/>
+                            </svg>
+                        </div>
+                    </header>
+                </div>
+                <header class="product__header">
+                    <a href="#">
+                        <h3 class="product__name">Юкола горбуши</h3>
+                    </a>
+                    <p class="product__weight">За 0,2 кг</p>
+                </header>
+                <footer class="product__footer">
+                    <div class="product__price">
+                        <span class="product__price-digit">476</span>
+                        <span class="product__price-currency">₽</span>
+                    </div>
+                    <button class="product__cart-button">В корзину</button>
+                </footer>
+                <div class="stocks-product__info">
+                    <a href="#" class="stocks-product__info-item">
+                        О товаре
+                    </a>
+                    <a href="#" class="stocks-product__info-item stocks-product__info-item_reviews">
+                        Отзывы (<span class="stocks-product__reviews-count">565</span>)
+                    </a>
+                    <a href="#" class="stocks-product__info-item">
+                        Вопросы (<span class="stocks-product__question-count">17</span>)
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section_gift">
+        <div class="section_gift__left-side">
+            <h2 class="section__title section__title_white">Дарим 500 ₽ на первый заказ!</h2>
+            <p class="section__subtitle">Зарезервируйте скидку* сейчас и мы поможем оформить ваш заказ.</p>
+            <small class="section_gift__explanation">*скидка привязывается к номеру телефона</small>
+
+            <form action="/" class="section_gift__send-email">
+                <input type="email" placeholder="Введите Ваш e-mail" class="send-email__input">
+                <button type="submit" class="send-email__button">Подписаться</button>
+            </form>
+
+            <p class="section_gift__approval">
+                Нажимая кнопку «Подписаться», я даю свое согласие на обработку моих персональных данных.
+            </p>
+        </div>
+
+        <div class="section_gift__advantages">
+            <div class="section_gift__advantages-item">
+                <span>Уведомление о статусах заказов</span>
+            </div>
+            <div class="section_gift__advantages-item">
+                <span>Личный менеджер</span>
+            </div>
+            <div class="section_gift__advantages-item">
+                <span>Самые выгодные предложения</span>
+            </div>
+        </div>
+    </section>
+
+    <footer class="section footer">
+        <nav class="footer__nav">
+            <div class="footer__nav-item footer__nav-links">
+                <h3 class="footer__nav-heading">Полезные ссылки</h3>
+                <a href="#" class="footer__nav-links-item">Доставка</a>
+                <a href="#" class="footer__nav-links-item">Оплата</a>
+                <a href="#" class="footer__nav-links-item">Акции</a>
+            </div>
+            <div class="footer__nav-item footer__nav-contacts">
+                <h3 class="footer__nav-heading">Контакты</h3>
+                <a href="tel:+71234567890" class="footer__nav-contacts-item">+7 123 456 78 90</a>
+                <a href="tel:+71234567890" class="footer__nav-contacts-item">+7 123 456 78 90</a>
+                <a href="mailto:name@mail.ru" class="footer__nav-contacts-item">name@mail.ru</a>
+            </div>
+            <div class="footer__nav-item footer__nav-socials">
+                <h3 class="footer__nav-heading">Социальные сети</h3>
+                <p>
+                    В наших группах мы постоянно проводим акции и конкурсы, присоединяйтесь!
+                </p>
+                <div class="footer__nav-socials-links">
+                    <a href="#" target="_tblank">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.9998 23.1998C5.81422 23.1998 0.799805 18.1854 0.799805 11.9998C0.799805 5.81422 5.81422 0.799805 11.9998 0.799805C18.1854 0.799805 23.1998 5.81422 23.1998 11.9998C23.1998 18.1854 18.1854 23.1998 11.9998 23.1998ZM11.9998 23.1998V10.3998C11.9998 8.63249 13.4325 7.1998 15.1998 7.1998H15.9998M7.9998 13.5998H15.9998" stroke="#010409"/>
+                        </svg>
+                    </a>
+                    <a href="#" target="_tblank">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.5998 5.5998H19.1998M7.1998 0.799805H16.7998C20.3344 0.799805 23.1998 3.66518 23.1998 7.1998V16.7998C23.1998 20.3344 20.3344 23.1998 16.7998 23.1998H7.1998C3.66518 23.1998 0.799805 20.3344 0.799805 16.7998V7.1998C0.799805 3.66518 3.66518 0.799805 7.1998 0.799805ZM11.9998 16.7998C9.34884 16.7998 7.1998 14.6508 7.1998 11.9998C7.1998 9.34884 9.34884 7.1998 11.9998 7.1998C14.6508 7.1998 16.7998 9.34884 16.7998 11.9998C16.7998 14.6508 14.6508 16.7998 11.9998 16.7998Z" stroke="#010409"/>
+                        </svg>
+                    </a>
+                    <a href="#" target="_tblank">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M23.1998 2.40039L0.799805 10.4004L7.1998 13.6004L16.7998 7.20039L10.3998 15.2004L19.9998 21.6004L23.1998 2.40039Z" stroke="#010409" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <a href="#" target="_tblank">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2.57719 20.3811L2.47243 20.87H2.47243L2.57719 20.3811ZM21.4224 20.3811L21.5272 20.87L21.4224 20.3811ZM21.4224 3.61933L21.5272 3.13043L21.4224 3.61933ZM2.57719 3.61933L2.68196 4.10823L2.57719 3.61933ZM10.3998 8.8002L10.6772 8.38417C10.5237 8.28189 10.3265 8.27235 10.1639 8.35936C10.0013 8.44637 9.8998 8.6158 9.8998 8.8002H10.3998ZM10.3998 15.2002H9.8998C9.8998 15.3846 10.0013 15.554 10.1639 15.641C10.3265 15.728 10.5237 15.7185 10.6772 15.6162L10.3998 15.2002ZM15.1998 12.0002L15.4772 12.4162C15.6163 12.3235 15.6998 12.1674 15.6998 12.0002C15.6998 11.833 15.6163 11.6769 15.4772 11.5842L15.1998 12.0002ZM0.299805 5.81794V18.1825H1.2998V5.81794H0.299805ZM23.6998 18.1825V5.81794H22.6998V18.1825H23.6998ZM2.47243 20.87C8.75273 22.2157 15.2469 22.2157 21.5272 20.87L21.3176 19.8922C15.1755 21.2083 8.82414 21.2083 2.68196 19.8922L2.47243 20.87ZM21.5272 3.13043C15.2469 1.78465 8.75273 1.78465 2.47243 3.13043L2.68196 4.10823C8.82414 2.79205 15.1755 2.79205 21.3176 4.10823L21.5272 3.13043ZM23.6998 5.81794C23.6998 4.52191 22.7944 3.40198 21.5272 3.13043L21.3176 4.10823C22.1238 4.28098 22.6998 4.99344 22.6998 5.81794H23.6998ZM22.6998 18.1825C22.6998 19.007 22.1238 19.7194 21.3176 19.8922L21.5272 20.87C22.7944 20.5984 23.6998 19.4785 23.6998 18.1825H22.6998ZM0.299805 18.1825C0.299805 19.4785 1.20517 20.5984 2.47243 20.87L2.68196 19.8922C1.87577 19.7194 1.2998 19.007 1.2998 18.1825H0.299805ZM1.2998 5.81794C1.2998 4.99344 1.87577 4.28098 2.68196 4.10823L2.47243 3.13043C1.20517 3.40198 0.299805 4.52191 0.299805 5.81794H1.2998ZM9.8998 8.8002V15.2002H10.8998V8.8002H9.8998ZM10.6772 15.6162L15.4772 12.4162L14.9225 11.5842L10.1225 14.7842L10.6772 15.6162ZM15.4772 11.5842L10.6772 8.38417L10.1225 9.21622L14.9225 12.4162L15.4772 11.5842Z" fill="#010409"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer__nav-item footer__nav-payments">
+                <h3 class="footer__nav-heading">Оплата</h3>
+                <p>
+                    В наших группах мы постоянно проводим акции и конкурсы, присоединяйтесь!
+                </p>
+                <div class="footer__nav-payments-items">
+                    <a href="#" target="_tblank">
+                        <img src="../assets/payments-logo/mir.png" alt="MIR">
+                    </a>
+                    <a href="#" target="_tblank">
+                        <img src="../assets/payments-logo/visa.png" alt="Visa">
+                    </a>
+                    <a href="#" target="_tblank">
+                        <img src="../assets/payments-logo/master-card.png" alt="MasterCard">
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <a href="#" class="logo">
+            <img src="../assets/logo.png" alt="Logo">
+        </a>
+
+        <div class="separator__wrapper separator__wrapper_footer">
+            <p class="footer__privacy-policy">
+                Политика конфиденциальности
+            </p>
+            <div class="separator"></div>
+        </div>
+
+        <div class="footer__small-text">
+            <p>
+                Данный интернет-сайт носит информационный характер и ни при каких условиях не является публичной офертой, которая определяется положениями Статьи 437 (2) Гражданского кодекса РФ. 
+            </p>
+            <p>
+                Для получения подробной информации о наличии и стоимости указанных товаров, пожалуйста, обращайтесь к нашим менеджерам по средства связи, указанные на Сайте
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
