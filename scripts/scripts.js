@@ -12,6 +12,7 @@
             responsive = []
         }) {
             if (!document.querySelector(wrap)) {
+                console.log(1);
                 return;
             }
             // элементы:
@@ -136,11 +137,11 @@
         }
     }
     
-    const carouselBenefits = new Carousel({
-        main: '.section_feedback-slider',
-        wrap: '.section_feedback-slider__wrapper',
-        prev: '.slider_news__arrow_left',
-        next: '.slider_news__arrow_right',
+    const carousel = new Carousel({
+        main: '.section_feedback_about-us-slider',
+        wrap: '.section_feedback_about-us-slider__wrapper',
+        prev: '.section_feedback_about-us-slider ~ .slider_news__arrow_left',
+        next: '.section_feedback_about-us-slider ~ .slider_news__arrow_right',
         slidesToShow: 3,
         infinity: true,
         responsive: [
@@ -151,9 +152,9 @@
         ]
     });
     
-    carouselBenefits.init();
+    carousel.init();
     
-    const carouselBenefits1 = new Carousel({
+    const carousel1 = new Carousel({
         main: '.slider_news',
         wrap: '.slider_news__wrapper',
         prev: '.slider_news__arrow_left',
@@ -168,7 +169,41 @@
         ]
     });
     
-    carouselBenefits1.init();
+    carousel1.init();
+
+    const carousel2 = new Carousel({
+        main: '.section_feedback_product-slider',
+        wrap: '.section_feedback_product-slider__wrapper',
+        prev: '.section_feedback_product-slider ~ .slider_news__arrow_left',
+        next: '.section_feedback_product-slider ~ .slider_news__arrow_right',
+        slidesToShow: 3,
+        infinity: true,
+        responsive: [
+            {
+            breakpoint: 576,
+            slidesToShow: 1
+            }
+        ]
+    });
+    
+    carousel2.init();
+
+    const carousel3 = new Carousel({
+        main: '.section_feedback_question-slider',
+        wrap: '.section_feedback_question-slider__wrapper',
+        prev: '.section_feedback_question-slider ~ .slider_news__arrow_left',
+        next: '.section_feedback_question-slider ~ .slider_news__arrow_right',
+        slidesToShow: 3,
+        infinity: true,
+        responsive: [
+            {
+            breakpoint: 576,
+            slidesToShow: 1
+            }
+        ]
+    });
+    
+    carousel3.init();
 })();
 
 // Кнопка "читать далее"
@@ -195,5 +230,36 @@
                 itemContent.classList.remove('slider_news__item-content_open')
             }
         });
+    });
+})();
+
+// Табы
+(() => {
+    const tabHeader = document.querySelector('.section_tabs__tabs-list'),
+          tab = tabHeader.querySelectorAll('.section_tabs__tabs-item'),
+          tabContent = document.querySelectorAll('.section_tabs__tabs-item-value');
+
+    const toggleTabContent = index => {
+        for (let i = 0; i < tabContent.length; i++) {
+            if (index === i) {
+                tab[i].classList.add('section_tabs__tabs-item_active');
+                tabContent[i].classList.remove('section_tabs__tabs-item-value_d-none');
+            } else {
+                tab[i].classList.remove('section_tabs__tabs-item_active');
+                tabContent[i].classList.add('section_tabs__tabs-item-value_d-none');
+            }
+        }
+    };
+    toggleTabContent(0);
+    tabHeader.addEventListener('click', event => {
+        let target = event.target;
+        target = target.closest('.section_tabs__tabs-item');
+        if (target) {
+            tab.forEach((item, i) => {
+                if (item === target) {
+                    toggleTabContent(i);
+                }
+            });
+        }
     });
 })();
