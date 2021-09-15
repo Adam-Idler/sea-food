@@ -7,6 +7,7 @@
     <link rel="icon" type="image/svg+xml" href="./assets/favicons/favicon.svg">
     <link rel="icon" type="image/png" href="./assets/favicons/favicon.png">
     <link rel="stylesheet" href="./style.css">
+    <script defer src="./scripts/scripts.js"></script>
     <title>Seafish</title>
 </head>
 <body>
@@ -54,7 +55,7 @@
                 
                 <img src="./assets/slider-images/1.jpg" alt="slider image" class="slider__image">
             </div>
-            <ul class="slider__dots">
+            <ul class="slider__dots" style="display: none;">
                 <li class="slider__dot slider__dot_active"></li>
                 <li class="slider__dot"></li>
                 <li class="slider__dot"></li>
@@ -476,45 +477,149 @@
         <p class="section__uptitle">Полезные новости</p>
         <h2 class="section__title">Лучшие новости и рецепты</h2>
 
-        <div class="slider_news">
-            <div class="slider_news__item">
-                <div class="slider_news__img-wrapper">
-                    <a href="" class="slider_news__img-link">
-                        <img src="./assets/slider-news-images/1.jpg" alt="" class="slider_news__img">
-                    </a>
+        <div class="slider__content">
+            <div class="slider_news">
+                <div class="slider_news__wrapper">
+                    <div class="slider_news__item-wrap">
+                        <div class="slider_news__item">
+                            <div class="slider_news__img-wrapper">
+                                <a href="" class="slider_news__img-link">
+                                    <img src="./assets/slider-news-images/1.jpg" alt="" class="slider_news__img">
+                                </a>
+                            </div>
+                            <div class="slider_news__item-text">
+                                <a href="#" class="slider_news__title-link">
+                                    <h2>Скидки по вторникам</h2>
+                                </a>
+                                <p class="slider_news__subtitle">-10% на морепродукты</p>
+                                <button type="button" class="slider_news__read-more slider_news__read-more_open">Читать далее >></button>
+                                <div class="slider_news__item-content">
+                                    <p>C 9 сентября по 10 октября 2021 г. для постоянных покупателей скидка 10%* на рыбу и морепродукты.</p>
+                                    <p>Свежая, соленая и копченая рыба, икра, крабовое мясо, креветки и другие деликатесы!</p>
+                                    <small>*Предложение ограничено.</small>
+                                    <button type="button" class="slider_news__read-more slider_news__read-more_close">Закрыть >></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="slider_news__item-wrap">
+                        <div class="slider_news__item">
+                            <div class="slider_news__img-wrapper">
+                                <a href="" class="slider_news__img-link">
+                                    <img src="./assets/slider-news-images/2.jpg" alt="" class="slider_news__img">
+                                </a>
+                            </div>
+                            <div class="slider_news__item-text">
+                                <a href="#" class="slider_news__title-link">
+                                    <h2>Вино в подарок! </h2>
+                                </a>
+                                <p class="slider_news__subtitle">При заказе товара от 5 000₽</p>
+                                <button type="button" class="slider_news__read-more slider_news__read-more_open">Читать далее >></button>
+                                <div class="slider_news__item-content">
+                                    <p>C 9 сентября по 10 октября 2021 г. для постоянных покупателей скидка 10%* на рыбу и морепродукты.</p>
+                                    <p>Свежая, соленая и копченая рыба, икра, крабовое мясо, креветки и другие деликатесы!</p>
+                                    <small>*Предложение ограничено.</small>
+                                    <button type="button" class="slider_news__read-more slider_news__read-more_close">Закрыть >></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="slider_news__item-wrap">
+                        <div class="slider_news__item">
+                            <div class="slider_news__img-wrapper">
+                                <a href="" class="slider_news__img-link">
+                                    <img src="./assets/slider-news-images/3.jpg" alt="" class="slider_news__img">
+                                </a>
+                            </div>
+                            <div class="slider_news__item-text">
+                                <a href="#" class="slider_news__title-link">
+                                    <h2>Запеченые мидии</h2>
+                                </a>
+                                <p class="slider_news__subtitle">При заказе товара от 5 000₽</p>
+                                <button type="button" class="slider_news__read-more slider_news__read-more_open">Читать далее >></button>
+                                <div class="slider_news__item-content">
+                                    <p>C 9 сентября по 10 октября 2021 г. для постоянных покупателей скидка 10%* на рыбу и морепродукты.</p>
+                                    <p>Свежая, соленая и копченая рыба, икра, крабовое мясо, креветки и другие деликатесы!</p>
+                                    <small>*Предложение ограничено.</small>
+                                    <button type="button" class="slider_news__read-more slider_news__read-more_close">Закрыть >></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider_news__item-wrap">
+                        <div class="slider_news__item">
+                            <div class="slider_news__img-wrapper">
+                                <a href="" class="slider_news__img-link">
+                                    <img src="./assets/slider-news-images/1.jpg" alt="" class="slider_news__img">
+                                </a>
+                            </div>
+                            <div class="slider_news__item-text">
+                                <a href="#" class="slider_news__title-link">
+                                    <h2>Скидки по вторникам</h2>
+                                </a>
+                                <p class="slider_news__subtitle">-10% на морепродукты</p>
+                                <button type="button" class="slider_news__read-more slider_news__read-more_open">Читать далее >></button>
+                                <div class="slider_news__item-content">
+                                    <p>C 9 сентября по 10 октября 2021 г. для постоянных покупателей скидка 10%* на рыбу и морепродукты.</p>
+                                    <p>Свежая, соленая и копченая рыба, икра, крабовое мясо, креветки и другие деликатесы!</p>
+                                    <small>*Предложение ограничено.</small>
+                                    <button type="button" class="slider_news__read-more slider_news__read-more_close">Закрыть >></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="slider_news__item-wrap">
+                        <div class="slider_news__item">
+                            <div class="slider_news__img-wrapper">
+                                <a href="" class="slider_news__img-link">
+                                    <img src="./assets/slider-news-images/2.jpg" alt="" class="slider_news__img">
+                                </a>
+                            </div>
+                            <div class="slider_news__item-text">
+                                <a href="#" class="slider_news__title-link">
+                                    <h2>Вино в подарок! </h2>
+                                </a>
+                                <p class="slider_news__subtitle">При заказе товара от 5 000₽</p>
+                                <button type="button" class="slider_news__read-more slider_news__read-more_open">Читать далее >></button>
+                                <div class="slider_news__item-content">
+                                    <p>C 9 сентября по 10 октября 2021 г. для постоянных покупателей скидка 10%* на рыбу и морепродукты.</p>
+                                    <p>Свежая, соленая и копченая рыба, икра, крабовое мясо, креветки и другие деликатесы!</p>
+                                    <small>*Предложение ограничено.</small>
+                                    <button type="button" class="slider_news__read-more slider_news__read-more_close">Закрыть >></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="slider_news__item-wrap">
+                        <div class="slider_news__item">
+                            <div class="slider_news__img-wrapper">
+                                <a href="" class="slider_news__img-link">
+                                    <img src="./assets/slider-news-images/3.jpg" alt="" class="slider_news__img">
+                                </a>
+                            </div>
+                            <div class="slider_news__item-text">
+                                <a href="#" class="slider_news__title-link">
+                                    <h2>Запеченые мидии</h2>
+                                </a>
+                                <p class="slider_news__subtitle">При заказе товара от 5 000₽</p>
+                                <button type="button" class="slider_news__read-more slider_news__read-more_open">Читать далее >></button>
+                                <div class="slider_news__item-content">
+                                    <p>C 9 сентября по 10 октября 2021 г. для постоянных покупателей скидка 10%* на рыбу и морепродукты.</p>
+                                    <p>Свежая, соленая и копченая рыба, икра, крабовое мясо, креветки и другие деликатесы!</p>
+                                    <small>*Предложение ограничено.</small>
+                                    <button type="button" class="slider_news__read-more slider_news__read-more_close">Закрыть >></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <a href="#" class="slider_news__title-link">
-                    <h2>Скидки по вторникам</h2>
-                </a>
-                <p class="slider_news__subtitle">-10% на морепродукты</p>
-                <a href="#" class="slider_news__read-more">Читать далее >></a>
             </div>
-            <div class="slider_news__item">
-                <div class="slider_news__img-wrapper">
-                    <a href="" class="slider_news__img-link">
-                        <img src="./assets/slider-news-images/2.jpg" alt="" class="slider_news__img">
-                    </a>
-                </div>
-                <a href="#" class="slider_news__title-link">
-                    <h2>Вино в подарок! </h2>
-                </a>
-                <p class="slider_news__subtitle">При заказе товара от 5 000₽</p>
-                <a href="#" class="slider_news__read-more">Читать далее >></a>
-            </div>
-            <div class="slider_news__item">
-                <div class="slider_news__img-wrapper">
-                    <a href="" class="slider_news__img-link">
-                        <img src="./assets/slider-news-images/3.jpg" alt="" class="slider_news__img">
-                    </a>
-                </div>
-                <a href="#" class="slider_news__title-link">
-                    <h2>Запеченые мидии</h2>
-                </a>
-                <p class="slider_news__subtitle">Время готовки: 25 минут</p>
-                <a href="#" class="slider_news__read-more">Читать далее >></a>
-            </div>
-                <div class="slider_news__arrow slider_news__arrow_left"></div>
-                <div class="slider_news__arrow slider_news__arrow_right"></div>
+            <div class="slider_news__arrow slider_news__arrow_left"></div>
+            <div class="slider_news__arrow slider_news__arrow_right"></div>
         </div>
 
         <button type="button" class="btn">Читать весь блог</button>
@@ -550,7 +655,7 @@
         </div>
     </section>
 
-    <section class="section section_about-us">
+    <section class="section section_about-us" id="about-us">
         <p class="section__uptitle">О нас</p>
         <h2 class="section__title">SeaFish</h2>
     </section>
@@ -655,5 +760,11 @@
             </p>
         </div>
     </footer>
+
+    <div class="quiz__button-wrapper">
+        <button class="btn btn_quiz">
+            <svg id="Capa_1" enable-background="new 0 0 447.149 447.149" height="60" viewBox="0 0 447.149 447.149" width="60" xmlns="http://www.w3.org/2000/svg"><g><path d="m225.888 70.619s36.035-74.657 122.1-65.954c3.839.427 7.319 2.457 9.58 5.589 9.461 12.605 14.317 28.07 13.761 43.821-1.626 28.763-107.83 50.919-107.83 50.919l-22.508-4.471z" fill="#f6c863"/><path d="m315.681 82.083c-21.97 8.212-45.228 12.438-68.682 12.481 31.327-28.317 71.218-45.355 113.335-48.409 4.963-.408 6.819 5.271 3.404 8.898-7.696 8.149-27.259 19.093-48.057 27.03z" fill="#eab54e"/><path d="m225.872 70.619s-36.035-74.657-122.1-65.954c-3.839.427-7.319 2.457-9.58 5.589-9.461 12.605-14.317 28.07-13.761 43.821 1.627 28.763 107.83 50.919 107.83 50.919l22.508-4.471z" fill="#f6c863"/><path d="m136.078 82.083c21.97 8.212 45.228 12.438 68.682 12.481-17.52-15.586-37.673-27.933-59.515-36.465-17.301-6.453-35.414-10.472-53.82-11.944-4.963-.408-6.819 5.271-3.404 8.898 7.669 8.149 27.287 19.093 48.057 27.03z" fill="#eab54e"/><circle cx="223.591" cy="95.537" fill="#eab54e" r="27.008"/><path d="m5.539 95.531h436.07c3.059 0 5.539 2.48 5.539 5.539v72.024c0 3.059-2.48 5.539-5.539 5.539h-436.07c-3.059 0-5.539-2.48-5.539-5.539v-72.024c0-3.059 2.48-5.539 5.539-5.539z" fill="#ef5261"/><path d="m425.115 163.397v274.253c-.009 3.055-2.484 5.53-5.539 5.539h-391.976c-3.055-.009-5.53-2.484-5.539-5.539v-274.253z" fill="#ef5261"/><path d="m22.061 178.634h403.06v19.389h-403.06z" fill="#da364c"/><path d="m191.167 95.531h64.842v347.652h-64.842z" fill="#f6c863"/><path d="m191.15 178.634h64.876v19.389h-64.876z" fill="#eab54e"/></g></svg>
+        </button>
+    </div>
 </body>
 </html>
