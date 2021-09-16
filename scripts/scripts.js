@@ -316,9 +316,9 @@
             }
 
             if (!this.wrap.querySelector(this.hiddenElementSelector)) {
-                console.log(1);
-                this.button.parentNode.classList.toggle('hidden-item');
-                this.button.removeEventListener('click', this.showItems.bind(this));
+                this.button.parentNode.classList.add('hidden-item');
+            } else {
+                this.button.parentNode.classList.remove('hidden-item');
             }
         }
 
@@ -361,6 +361,7 @@
         updateChildren(parent, children) {
             this.removeChildren(parent);
             children.forEach(child => {
+                console.log(child);
                 parent.appendChild(child);
                 child.classList.add('hidden-item');
             })
@@ -445,5 +446,4 @@
     });
 
     mainCatalog.init();
-
 })();
