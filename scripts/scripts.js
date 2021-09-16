@@ -316,6 +316,7 @@
             }
 
             if (!this.wrap.querySelector(this.hiddenElementSelector)) {
+                console.log(1);
                 this.button.parentNode.classList.toggle('hidden-item');
                 this.button.removeEventListener('click', this.showItems.bind(this));
             }
@@ -367,28 +368,25 @@
             catalogButton.showItems();
         }
 
-        filter(e) {
-            
-        }
-
         init() {
             if (!this.catalogNav) {
                 return
             }
             this.catalogNav.addEventListener('click', (e) => {
-                let target = e.target;
+                let target = e.target,
+                    item = target.closest(`.${this.catalogNavItems[0].classList[0]}`);
 
-                if (!target || target.classList.contains(this.activeClassName)) {
+                if (!item || item.classList.contains(this.activeClassName)) {
                     return;
                 }
 
                 e.preventDefault();
-                let filterValue = target.getAttribute('data-filter'),
+                let filterValue = item.getAttribute('data-filter'),
                     previousBtnActive = this.catalogNav.querySelector(`.${this.catalogNavItems[0].classList[0]}.${this.activeClassName}`),
                     hiddenElements = this.section.querySelectorAll('.hidden-item');
 
                 previousBtnActive.classList.remove(this.activeClassName);
-                target.classList.add(this.activeClassName);
+                item.classList.add(this.activeClassName);
 
                 if (filterValue === 'all') {
                     this.updateChildren(this.catalog, this.catalogItems);
@@ -396,7 +394,10 @@
                 }
 
                 let filteredItems = [];
-                filteredItems = [...this.catalogItems].filter(item => item.getAttribute('data-category').includes(filterValue));
+                filteredItems = [...this.catalogItems].filter(item => {
+                    return item.getAttribute('data-category').includes(filterValue)
+                });
+
                 if (hiddenElements === 0) {
                     this.section.querySelector('.catalog-btn-show-more').parentNode.classList.add('hidden-item');
                 } else {
