@@ -70,26 +70,12 @@
             <section class="section_catalog__product-list">
                 <div class="section_catalog__sort">
                     <p>Сортировать по</p>
-                    <ul class="section_catalog__sort-list">
-                        <li class="section_catalog__sort-item section_catalog__sort-item_active">
-                            <a href="#">
-                                Популярности
-                            </a>
-                        </li>
-                        <li class="section_catalog__sort-item">
-                            <a href="#">
-                                Цене
-                            </a>
-                        </li>
-                        <li class="section_catalog__sort-item">
-                            <a href="#">
-                                Алфавиту
-                            </a>
-                        </li>
-                    </ul>
+                        <button type="button" class="section_catalog__sort-item section_catalog__sort-item_active" data-sort="popular" data-direction="asc">Популярности</button>
+                        <button type="button" class="section_catalog__sort-item" data-sort="cost" data-direction="asc">Цене</button>
+                        <button type="button" class="section_catalog__sort-item" data-sort="alphabet" data-direction="asc">Алфавиту</button>
                 </div> 
                 <div class="stocks__catalog">
-                    <div class="stocks__catalog-item hidden-item" data-category="seafood fish">
+                    <div class="stocks__catalog-item hidden-item" data-category="seafood fish" data-cost="118.40">
                         <div class="rate-button">
                             <input class="rate-button__hidden" type="radio" name="ratinga" id="1a" checked>
                             <label class="rate-button__item rate-button__item_empty" for="1a"></label>
@@ -148,7 +134,7 @@
                         </footer>
                     </div>
         
-                    <div class="stocks__catalog-item hidden-item" data-category="seafood shrimp">
+                    <div class="stocks__catalog-item hidden-item" data-category="seafood shrimp" data-cost="387">
                         <div class="rate-button">
                             <input class="rate-button__hidden" type="radio" name="ratingb" id="1b" checked>
                             <label class="rate-button__item rate-button__item_empty" for="1b"></label>
@@ -207,7 +193,7 @@
                         </footer>
                     </div>
         
-                    <div class="stocks__catalog-item hidden-item" data-category="seafood seafood">
+                    <div class="stocks__catalog-item hidden-item" data-category="seafood seafood" data-cost="450">
                         <div class="rate-button">
                             <input class="rate-button__hidden" type="radio" name="ratingh" id="1h" checked>
                             <label class="rate-button__item rate-button__item_empty" for="1h"></label>
@@ -267,7 +253,7 @@
                         </footer>
                     </div>
         
-                    <div class="stocks__catalog-item hidden-item" data-category="seafood crab">
+                    <div class="stocks__catalog-item hidden-item" data-category="seafood crab" data-cost="2500">
                         <div class="rate-button">
                             <input class="rate-button__hidden" type="radio" name="ratingc" id="1c" checked>
                             <label class="rate-button__item rate-button__item_empty" for="1c"></label>
@@ -326,7 +312,7 @@
                         </footer>
                     </div>
         
-                    <div class="stocks__catalog-item hidden-item" data-category="seafood shrimp">
+                    <div class="stocks__catalog-item hidden-item" data-category="seafood shrimp" data-cost="1500">
                         <div class="rate-button">
                             <input class="rate-button__hidden" type="radio" name="ratingd" id="1d" checked>
                             <label class="rate-button__item rate-button__item_empty" for="1d"></label>
@@ -385,7 +371,7 @@
                         </footer>
                     </div>
         
-                    <div class="stocks__catalog-item hidden-item" data-category="seafood shrimp">
+                    <div class="stocks__catalog-item hidden-item" data-category="seafood shrimp" data-cost="476">
                         <div class="rate-button">
                             <input class="rate-button__hidden" type="radio" name="ratingf" id="1f" checked>
                             <label class="rate-button__item rate-button__item_empty" for="1f"></label>
@@ -444,7 +430,7 @@
                         </footer>
                     </div>
         
-                    <div class="stocks__catalog-item hidden-item" data-category="seafood crab">
+                    <div class="stocks__catalog-item hidden-item" data-category="seafood crab" data-cost="2500">
                         <div class="rate-button">
                             <input class="rate-button__hidden" type="radio" name="ratingc" id="1c" checked>
                             <label class="rate-button__item rate-button__item_empty" for="1c"></label>
@@ -503,7 +489,7 @@
                         </footer>
                     </div>
         
-                    <div class="stocks__catalog-item hidden-item" data-category="seafood crab">
+                    <div class="stocks__catalog-item hidden-item" data-category="seafood crab" data-cost="1500">
                         <div class="rate-button">
                             <input class="rate-button__hidden" type="radio" name="ratingd" id="1d" checked>
                             <label class="rate-button__item rate-button__item_empty" for="1d"></label>
@@ -562,7 +548,7 @@
                         </footer>
                     </div>
         
-                    <div class="stocks__catalog-item hidden-item" data-category="seafood shrimp">
+                    <div class="stocks__catalog-item hidden-item" data-category="seafood shrimp" data-cost="476">
                         <div class="rate-button">
                             <input class="rate-button__hidden" type="radio" name="ratingf" id="1f" checked>
                             <label class="rate-button__item rate-button__item_empty" for="1f"></label>
@@ -621,7 +607,7 @@
                         </footer>
                     </div>
         
-                    <div class="stocks__catalog-item hidden-item" data-category="seafood shrimp">
+                    <div class="stocks__catalog-item hidden-item" data-category="seafood shrimp" data-cost="2500">
                         <div class="rate-button">
                             <input class="rate-button__hidden" type="radio" name="ratingc" id="1c" checked>
                             <label class="rate-button__item rate-button__item_empty" for="1c"></label>
@@ -680,7 +666,7 @@
                         </footer>
                     </div>
         
-                    <div class="stocks__catalog-item hidden-item" data-category="seafood seafood">
+                    <div class="stocks__catalog-item hidden-item" data-category="seafood seafood" data-cost="1500">
                         <div class="rate-button">
                             <input class="rate-button__hidden" type="radio" name="ratingd" id="1d" checked>
                             <label class="rate-button__item rate-button__item_empty" for="1d"></label>
@@ -739,477 +725,6 @@
                         </footer>
                     </div>
         
-                    <div class="stocks__catalog-item hidden-item" data-category="seafood crab">
-                        <div class="rate-button">
-                            <input class="rate-button__hidden" type="radio" name="ratingf" id="1f" checked>
-                            <label class="rate-button__item rate-button__item_empty" for="1f"></label>
-                            <input class="rate-button__hidden" type="radio" name="ratingf" id="2f">
-                            <label class="rate-button__item rate-button__item_empty" for="2f"></label>
-                            <input class="rate-button__hidden" type="radio" name="ratingf" id="3f">
-                            <label class="rate-button__item rate-button__item_empty" for="3f"></label>
-                            <input class="rate-button__hidden" type="radio" name="ratingf" id="4f">
-                            <label class="rate-button__item rate-button__item_empty" for="4f"></label>
-                            <input class="rate-button__hidden" type="radio" name="ratingf" id="5f">
-                            <label class="rate-button__item rate-button__item_empty" for="5f"></label>
-                        </div>
-                        <div class="stocks__catalog-item-image-wrapper" style="background: url('../assets/catalog-images/6.jpg'); background-position: center; background-size: cover;">
-                            <header class="image-wrapper__header">
-                                <div class="image-wrapper__label">Хит продаж</div>
-                                <div class="favourite-product">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M11.9998 21.6L11.6462 21.9536C11.74 22.0473 11.8672 22.1 11.9998 22.1C12.1324 22.1 12.2596 22.0473 12.3534 21.9536L11.9998 21.6ZM2.45666 12.0569L2.1031 12.4104H2.1031L2.45666 12.0569ZM10.4567 4.05688L10.1031 4.41043L10.4567 4.05688ZM11.9998 5.60002L11.6462 5.95358C11.8415 6.14884 12.1581 6.14884 12.3534 5.95358L11.9998 5.60002ZM13.5429 4.05688L13.1894 3.70332V3.70332L13.5429 4.05688ZM12.3534 21.2465L2.81021 11.7033L2.1031 12.4104L11.6462 21.9536L12.3534 21.2465ZM21.1894 11.7033L11.6462 21.2465L12.3534 21.9536L21.8965 12.4104L21.1894 11.7033ZM10.1031 4.41043L11.6462 5.95358L12.3534 5.24647L10.8102 3.70333L10.1031 4.41043ZM12.3534 5.95358L13.8965 4.41043L13.1894 3.70332L11.6462 5.24647L12.3534 5.95358ZM17.5429 1.90002C15.91 1.90002 14.344 2.54869 13.1894 3.70332L13.8965 4.41043C14.8636 3.44333 16.1753 2.90002 17.5429 2.90002V1.90002ZM22.6998 8.05688C22.6998 9.42456 22.1565 10.7362 21.1894 11.7033L21.8965 12.4104C23.0511 11.2558 23.6998 9.68978 23.6998 8.05688H22.6998ZM23.6998 8.05688C23.6998 4.65654 20.9433 1.90002 17.5429 1.90002V2.90002C20.391 2.90002 22.6998 5.20883 22.6998 8.05688H23.6998ZM6.45666 2.90002C7.82434 2.90002 9.13601 3.44333 10.1031 4.41043L10.8102 3.70333C9.65558 2.54869 8.08956 1.90002 6.45666 1.90002V2.90002ZM1.2998 8.05688C1.2998 5.20883 3.60861 2.90002 6.45666 2.90002V1.90002C3.05632 1.90002 0.299805 4.65654 0.299805 8.05688H1.2998ZM2.81021 11.7033C1.84311 10.7362 1.2998 9.42456 1.2998 8.05688H0.299805C0.299805 9.68978 0.948469 11.2558 2.1031 12.4104L2.81021 11.7033Z" fill="#FEFEFE"/>
-                                    </svg>
-                                </div>
-                            </header>
-                            <main class="product__main">
-                                <h2 class="product__information-title">Общая информация:</h2>
-        
-                                <div class="product__information-block">
-                                    <span class="product__information-name product__information-manufacturer">Производитель: </span> 
-                                    <span class="product__information-value product__manufacturer-value">ООО «Мореодор»</span>
-                                </div>
-        
-                                <div class="product__information-block">
-                                    <span class="product__information-name product__information-made-in">Страна производства: </span> 
-                                    <span class="product__information-value product__made-in-value">Россия</span>
-                                </div>
-        
-                                <div class="product__information-block">
-                                    <span class="product__information-name product__information-weight">Вес: </span> 
-                                    <span class="product__information-value product__weight-value">500 гр.</span>
-                                </div>
-                            </main>
-                            <footer class="image-wrapper__footer">
-                                Есть на складе!
-                            </footer>
-                        </div>
-                        <header class="product__header">
-                            <a href="#">
-                                <h3 class="product__name">Юкола горбуши</h3>
-                            </a>
-                            <p class="product__weight">За 0,2 кг</p>
-                        </header>
-                        <footer class="product__footer">
-                            <div class="product__price">
-                                <span class="product__price-digit">476</span>
-                                <span class="product__price-currency">₽</span>
-                            </div>
-                            <button class="product__cart-button">В корзину</button>
-                        </footer>
-                    </div>
-        
-                    <div class="stocks__catalog-item hidden-item" data-category="seafood shrimp">
-                        <div class="rate-button">
-                            <input class="rate-button__hidden" type="radio" name="ratingc" id="1c" checked>
-                            <label class="rate-button__item rate-button__item_empty" for="1c"></label>
-                            <input class="rate-button__hidden" type="radio" name="ratingc" id="2c">
-                            <label class="rate-button__item rate-button__item_empty" for="2c"></label>
-                            <input class="rate-button__hidden" type="radio" name="ratingc" id="3c">
-                            <label class="rate-button__item rate-button__item_empty" for="3c"></label>
-                            <input class="rate-button__hidden" type="radio" name="ratingc" id="4c">
-                            <label class="rate-button__item rate-button__item_empty" for="4c"></label>
-                            <input class="rate-button__hidden" type="radio" name="ratingc" id="5c">
-                            <label class="rate-button__item rate-button__item_empty" for="5c"></label>
-                        </div>
-                        <div class="stocks__catalog-item-image-wrapper" style="background: url('../assets/catalog-images/4.jpg'); background-position: center; background-size: cover;">
-                            <header class="image-wrapper__header">
-                                <div class="image-wrapper__label">Хит продаж</div>
-                                <div class="favourite-product">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M11.9998 21.6L11.6462 21.9536C11.74 22.0473 11.8672 22.1 11.9998 22.1C12.1324 22.1 12.2596 22.0473 12.3534 21.9536L11.9998 21.6ZM2.45666 12.0569L2.1031 12.4104H2.1031L2.45666 12.0569ZM10.4567 4.05688L10.1031 4.41043L10.4567 4.05688ZM11.9998 5.60002L11.6462 5.95358C11.8415 6.14884 12.1581 6.14884 12.3534 5.95358L11.9998 5.60002ZM13.5429 4.05688L13.1894 3.70332V3.70332L13.5429 4.05688ZM12.3534 21.2465L2.81021 11.7033L2.1031 12.4104L11.6462 21.9536L12.3534 21.2465ZM21.1894 11.7033L11.6462 21.2465L12.3534 21.9536L21.8965 12.4104L21.1894 11.7033ZM10.1031 4.41043L11.6462 5.95358L12.3534 5.24647L10.8102 3.70333L10.1031 4.41043ZM12.3534 5.95358L13.8965 4.41043L13.1894 3.70332L11.6462 5.24647L12.3534 5.95358ZM17.5429 1.90002C15.91 1.90002 14.344 2.54869 13.1894 3.70332L13.8965 4.41043C14.8636 3.44333 16.1753 2.90002 17.5429 2.90002V1.90002ZM22.6998 8.05688C22.6998 9.42456 22.1565 10.7362 21.1894 11.7033L21.8965 12.4104C23.0511 11.2558 23.6998 9.68978 23.6998 8.05688H22.6998ZM23.6998 8.05688C23.6998 4.65654 20.9433 1.90002 17.5429 1.90002V2.90002C20.391 2.90002 22.6998 5.20883 22.6998 8.05688H23.6998ZM6.45666 2.90002C7.82434 2.90002 9.13601 3.44333 10.1031 4.41043L10.8102 3.70333C9.65558 2.54869 8.08956 1.90002 6.45666 1.90002V2.90002ZM1.2998 8.05688C1.2998 5.20883 3.60861 2.90002 6.45666 2.90002V1.90002C3.05632 1.90002 0.299805 4.65654 0.299805 8.05688H1.2998ZM2.81021 11.7033C1.84311 10.7362 1.2998 9.42456 1.2998 8.05688H0.299805C0.299805 9.68978 0.948469 11.2558 2.1031 12.4104L2.81021 11.7033Z" fill="#FEFEFE"/>
-                                    </svg>
-                                </div>
-                            </header>
-                            <main class="product__main">
-                                <h2 class="product__information-title">Общая информация:</h2>
-        
-                                <div class="product__information-block">
-                                    <span class="product__information-name product__information-manufacturer">Производитель: </span> 
-                                    <span class="product__information-value product__manufacturer-value">ООО «Мореодор»</span>
-                                </div>
-        
-                                <div class="product__information-block">
-                                    <span class="product__information-name product__information-made-in">Страна производства: </span> 
-                                    <span class="product__information-value product__made-in-value">Россия</span>
-                                </div>
-        
-                                <div class="product__information-block">
-                                    <span class="product__information-name product__information-weight">Вес: </span> 
-                                    <span class="product__information-value product__weight-value">500 гр.</span>
-                                </div>
-                            </main>
-                            <footer class="image-wrapper__footer">
-                                Есть на складе!
-                            </footer>
-                        </div>
-                        <header class="product__header">
-                            <a href="#">
-                                <h3 class="product__name">Креветка гребенчатая</h3>
-                            </a>
-                            <p class="product__weight">За 1 кг</p>
-                        </header>
-                        <footer class="product__footer">
-                            <div class="product__price">
-                                <span class="product__price-digit">2 500</span>
-                                <span class="product__price-currency">₽</span>
-                            </div>
-                            <button class="product__cart-button">В корзину</button>
-                        </footer>
-                    </div>
-        
-                    <div class="stocks__catalog-item hidden-item" data-category="seafood shrimp">
-                        <div class="rate-button">
-                            <input class="rate-button__hidden" type="radio" name="ratingd" id="1d" checked>
-                            <label class="rate-button__item rate-button__item_empty" for="1d"></label>
-                            <input class="rate-button__hidden" type="radio" name="ratingd" id="2d">
-                            <label class="rate-button__item rate-button__item_empty" for="2d"></label>
-                            <input class="rate-button__hidden" type="radio" name="ratingd" id="3d">
-                            <label class="rate-button__item rate-button__item_empty" for="3d"></label>
-                            <input class="rate-button__hidden" type="radio" name="ratingd" id="4d">
-                            <label class="rate-button__item rate-button__item_empty" for="4d"></label>
-                            <input class="rate-button__hidden" type="radio" name="ratingd" id="5d">
-                            <label class="rate-button__item rate-button__item_empty" for="5d"></label>
-                        </div>
-                        <div class="stocks__catalog-item-image-wrapper" style="background: url('../assets/catalog-images/5.jpg'); background-position: center; background-size: cover;">
-                            <header class="image-wrapper__header">
-                                <div class="image-wrapper__label">Хит продаж</div>
-                                <div class="favourite-product">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M11.9998 21.6L11.6462 21.9536C11.74 22.0473 11.8672 22.1 11.9998 22.1C12.1324 22.1 12.2596 22.0473 12.3534 21.9536L11.9998 21.6ZM2.45666 12.0569L2.1031 12.4104H2.1031L2.45666 12.0569ZM10.4567 4.05688L10.1031 4.41043L10.4567 4.05688ZM11.9998 5.60002L11.6462 5.95358C11.8415 6.14884 12.1581 6.14884 12.3534 5.95358L11.9998 5.60002ZM13.5429 4.05688L13.1894 3.70332V3.70332L13.5429 4.05688ZM12.3534 21.2465L2.81021 11.7033L2.1031 12.4104L11.6462 21.9536L12.3534 21.2465ZM21.1894 11.7033L11.6462 21.2465L12.3534 21.9536L21.8965 12.4104L21.1894 11.7033ZM10.1031 4.41043L11.6462 5.95358L12.3534 5.24647L10.8102 3.70333L10.1031 4.41043ZM12.3534 5.95358L13.8965 4.41043L13.1894 3.70332L11.6462 5.24647L12.3534 5.95358ZM17.5429 1.90002C15.91 1.90002 14.344 2.54869 13.1894 3.70332L13.8965 4.41043C14.8636 3.44333 16.1753 2.90002 17.5429 2.90002V1.90002ZM22.6998 8.05688C22.6998 9.42456 22.1565 10.7362 21.1894 11.7033L21.8965 12.4104C23.0511 11.2558 23.6998 9.68978 23.6998 8.05688H22.6998ZM23.6998 8.05688C23.6998 4.65654 20.9433 1.90002 17.5429 1.90002V2.90002C20.391 2.90002 22.6998 5.20883 22.6998 8.05688H23.6998ZM6.45666 2.90002C7.82434 2.90002 9.13601 3.44333 10.1031 4.41043L10.8102 3.70333C9.65558 2.54869 8.08956 1.90002 6.45666 1.90002V2.90002ZM1.2998 8.05688C1.2998 5.20883 3.60861 2.90002 6.45666 2.90002V1.90002C3.05632 1.90002 0.299805 4.65654 0.299805 8.05688H1.2998ZM2.81021 11.7033C1.84311 10.7362 1.2998 9.42456 1.2998 8.05688H0.299805C0.299805 9.68978 0.948469 11.2558 2.1031 12.4104L2.81021 11.7033Z" fill="#FEFEFE"/>
-                                    </svg>
-                                </div>
-                            </header>
-                            <main class="product__main">
-                                <h2 class="product__information-title">Общая информация:</h2>
-        
-                                <div class="product__information-block">
-                                    <span class="product__information-name product__information-manufacturer">Производитель: </span> 
-                                    <span class="product__information-value product__manufacturer-value">ООО «Мореодор»</span>
-                                </div>
-        
-                                <div class="product__information-block">
-                                    <span class="product__information-name product__information-made-in">Страна производства: </span> 
-                                    <span class="product__information-value product__made-in-value">Россия</span>
-                                </div>
-        
-                                <div class="product__information-block">
-                                    <span class="product__information-name product__information-weight">Вес: </span> 
-                                    <span class="product__information-value product__weight-value">500 гр.</span>
-                                </div>
-                            </main>
-                            <footer class="image-wrapper__footer">
-                                Есть на складе!
-                            </footer>
-                        </div>
-                        <header class="product__header">
-                            <a href="#">
-                                <h3 class="product__name">Икра Кеты</h3>
-                            </a>
-                            <p class="product__weight">За 0,25 кг</p>
-                        </header>
-                        <footer class="product__footer">
-                            <div class="product__price">
-                                <span class="product__price-digit">1 500</span>
-                                <span class="product__price-currency">₽</span>
-                            </div>
-                            <button class="product__cart-button">В корзину</button>
-                        </footer>
-                    </div>
-        
-                    <div class="stocks__catalog-item hidden-item" data-category="seafood crab">
-                        <div class="rate-button">
-                            <input class="rate-button__hidden" type="radio" name="ratingf" id="1f" checked>
-                            <label class="rate-button__item rate-button__item_empty" for="1f"></label>
-                            <input class="rate-button__hidden" type="radio" name="ratingf" id="2f">
-                            <label class="rate-button__item rate-button__item_empty" for="2f"></label>
-                            <input class="rate-button__hidden" type="radio" name="ratingf" id="3f">
-                            <label class="rate-button__item rate-button__item_empty" for="3f"></label>
-                            <input class="rate-button__hidden" type="radio" name="ratingf" id="4f">
-                            <label class="rate-button__item rate-button__item_empty" for="4f"></label>
-                            <input class="rate-button__hidden" type="radio" name="ratingf" id="5f">
-                            <label class="rate-button__item rate-button__item_empty" for="5f"></label>
-                        </div>
-                        <div class="stocks__catalog-item-image-wrapper" style="background: url('../assets/catalog-images/6.jpg'); background-position: center; background-size: cover;">
-                            <header class="image-wrapper__header">
-                                <div class="image-wrapper__label">Хит продаж</div>
-                                <div class="favourite-product">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M11.9998 21.6L11.6462 21.9536C11.74 22.0473 11.8672 22.1 11.9998 22.1C12.1324 22.1 12.2596 22.0473 12.3534 21.9536L11.9998 21.6ZM2.45666 12.0569L2.1031 12.4104H2.1031L2.45666 12.0569ZM10.4567 4.05688L10.1031 4.41043L10.4567 4.05688ZM11.9998 5.60002L11.6462 5.95358C11.8415 6.14884 12.1581 6.14884 12.3534 5.95358L11.9998 5.60002ZM13.5429 4.05688L13.1894 3.70332V3.70332L13.5429 4.05688ZM12.3534 21.2465L2.81021 11.7033L2.1031 12.4104L11.6462 21.9536L12.3534 21.2465ZM21.1894 11.7033L11.6462 21.2465L12.3534 21.9536L21.8965 12.4104L21.1894 11.7033ZM10.1031 4.41043L11.6462 5.95358L12.3534 5.24647L10.8102 3.70333L10.1031 4.41043ZM12.3534 5.95358L13.8965 4.41043L13.1894 3.70332L11.6462 5.24647L12.3534 5.95358ZM17.5429 1.90002C15.91 1.90002 14.344 2.54869 13.1894 3.70332L13.8965 4.41043C14.8636 3.44333 16.1753 2.90002 17.5429 2.90002V1.90002ZM22.6998 8.05688C22.6998 9.42456 22.1565 10.7362 21.1894 11.7033L21.8965 12.4104C23.0511 11.2558 23.6998 9.68978 23.6998 8.05688H22.6998ZM23.6998 8.05688C23.6998 4.65654 20.9433 1.90002 17.5429 1.90002V2.90002C20.391 2.90002 22.6998 5.20883 22.6998 8.05688H23.6998ZM6.45666 2.90002C7.82434 2.90002 9.13601 3.44333 10.1031 4.41043L10.8102 3.70333C9.65558 2.54869 8.08956 1.90002 6.45666 1.90002V2.90002ZM1.2998 8.05688C1.2998 5.20883 3.60861 2.90002 6.45666 2.90002V1.90002C3.05632 1.90002 0.299805 4.65654 0.299805 8.05688H1.2998ZM2.81021 11.7033C1.84311 10.7362 1.2998 9.42456 1.2998 8.05688H0.299805C0.299805 9.68978 0.948469 11.2558 2.1031 12.4104L2.81021 11.7033Z" fill="#FEFEFE"/>
-                                    </svg>
-                                </div>
-                            </header>
-                            <main class="product__main">
-                                <h2 class="product__information-title">Общая информация:</h2>
-        
-                                <div class="product__information-block">
-                                    <span class="product__information-name product__information-manufacturer">Производитель: </span> 
-                                    <span class="product__information-value product__manufacturer-value">ООО «Мореодор»</span>
-                                </div>
-        
-                                <div class="product__information-block">
-                                    <span class="product__information-name product__information-made-in">Страна производства: </span> 
-                                    <span class="product__information-value product__made-in-value">Россия</span>
-                                </div>
-        
-                                <div class="product__information-block">
-                                    <span class="product__information-name product__information-weight">Вес: </span> 
-                                    <span class="product__information-value product__weight-value">500 гр.</span>
-                                </div>
-                            </main>
-                            <footer class="image-wrapper__footer">
-                                Есть на складе!
-                            </footer>
-                        </div>
-                        <header class="product__header">
-                            <a href="#">
-                                <h3 class="product__name">Юкола горбуши</h3>
-                            </a>
-                            <p class="product__weight">За 0,2 кг</p>
-                        </header>
-                        <footer class="product__footer">
-                            <div class="product__price">
-                                <span class="product__price-digit">476</span>
-                                <span class="product__price-currency">₽</span>
-                            </div>
-                            <button class="product__cart-button">В корзину</button>
-                        </footer>
-                    </div>
-        
-                    <div class="stocks__catalog-item hidden-item" data-category="seafood fish">
-                        <div class="rate-button">
-                            <input class="rate-button__hidden" type="radio" name="ratingc" id="1c" checked>
-                            <label class="rate-button__item rate-button__item_empty" for="1c"></label>
-                            <input class="rate-button__hidden" type="radio" name="ratingc" id="2c">
-                            <label class="rate-button__item rate-button__item_empty" for="2c"></label>
-                            <input class="rate-button__hidden" type="radio" name="ratingc" id="3c">
-                            <label class="rate-button__item rate-button__item_empty" for="3c"></label>
-                            <input class="rate-button__hidden" type="radio" name="ratingc" id="4c">
-                            <label class="rate-button__item rate-button__item_empty" for="4c"></label>
-                            <input class="rate-button__hidden" type="radio" name="ratingc" id="5c">
-                            <label class="rate-button__item rate-button__item_empty" for="5c"></label>
-                        </div>
-                        <div class="stocks__catalog-item-image-wrapper" style="background: url('../assets/catalog-images/4.jpg'); background-position: center; background-size: cover;">
-                            <header class="image-wrapper__header">
-                                <div class="image-wrapper__label">Хит продаж</div>
-                                <div class="favourite-product">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M11.9998 21.6L11.6462 21.9536C11.74 22.0473 11.8672 22.1 11.9998 22.1C12.1324 22.1 12.2596 22.0473 12.3534 21.9536L11.9998 21.6ZM2.45666 12.0569L2.1031 12.4104H2.1031L2.45666 12.0569ZM10.4567 4.05688L10.1031 4.41043L10.4567 4.05688ZM11.9998 5.60002L11.6462 5.95358C11.8415 6.14884 12.1581 6.14884 12.3534 5.95358L11.9998 5.60002ZM13.5429 4.05688L13.1894 3.70332V3.70332L13.5429 4.05688ZM12.3534 21.2465L2.81021 11.7033L2.1031 12.4104L11.6462 21.9536L12.3534 21.2465ZM21.1894 11.7033L11.6462 21.2465L12.3534 21.9536L21.8965 12.4104L21.1894 11.7033ZM10.1031 4.41043L11.6462 5.95358L12.3534 5.24647L10.8102 3.70333L10.1031 4.41043ZM12.3534 5.95358L13.8965 4.41043L13.1894 3.70332L11.6462 5.24647L12.3534 5.95358ZM17.5429 1.90002C15.91 1.90002 14.344 2.54869 13.1894 3.70332L13.8965 4.41043C14.8636 3.44333 16.1753 2.90002 17.5429 2.90002V1.90002ZM22.6998 8.05688C22.6998 9.42456 22.1565 10.7362 21.1894 11.7033L21.8965 12.4104C23.0511 11.2558 23.6998 9.68978 23.6998 8.05688H22.6998ZM23.6998 8.05688C23.6998 4.65654 20.9433 1.90002 17.5429 1.90002V2.90002C20.391 2.90002 22.6998 5.20883 22.6998 8.05688H23.6998ZM6.45666 2.90002C7.82434 2.90002 9.13601 3.44333 10.1031 4.41043L10.8102 3.70333C9.65558 2.54869 8.08956 1.90002 6.45666 1.90002V2.90002ZM1.2998 8.05688C1.2998 5.20883 3.60861 2.90002 6.45666 2.90002V1.90002C3.05632 1.90002 0.299805 4.65654 0.299805 8.05688H1.2998ZM2.81021 11.7033C1.84311 10.7362 1.2998 9.42456 1.2998 8.05688H0.299805C0.299805 9.68978 0.948469 11.2558 2.1031 12.4104L2.81021 11.7033Z" fill="#FEFEFE"/>
-                                    </svg>
-                                </div>
-                            </header>
-                            <main class="product__main">
-                                <h2 class="product__information-title">Общая информация:</h2>
-        
-                                <div class="product__information-block">
-                                    <span class="product__information-name product__information-manufacturer">Производитель: </span> 
-                                    <span class="product__information-value product__manufacturer-value">ООО «Мореодор»</span>
-                                </div>
-        
-                                <div class="product__information-block">
-                                    <span class="product__information-name product__information-made-in">Страна производства: </span> 
-                                    <span class="product__information-value product__made-in-value">Россия</span>
-                                </div>
-        
-                                <div class="product__information-block">
-                                    <span class="product__information-name product__information-weight">Вес: </span> 
-                                    <span class="product__information-value product__weight-value">500 гр.</span>
-                                </div>
-                            </main>
-                            <footer class="image-wrapper__footer">
-                                Есть на складе!
-                            </footer>
-                        </div>
-                        <header class="product__header">
-                            <a href="#">
-                                <h3 class="product__name">Креветка гребенчатая</h3>
-                            </a>
-                            <p class="product__weight">За 1 кг</p>
-                        </header>
-                        <footer class="product__footer">
-                            <div class="product__price">
-                                <span class="product__price-digit">2 500</span>
-                                <span class="product__price-currency">₽</span>
-                            </div>
-                            <button class="product__cart-button">В корзину</button>
-                        </footer>
-                    </div>
-        
-                    <div class="stocks__catalog-item hidden-item" data-category="seafood fish">
-                        <div class="rate-button">
-                            <input class="rate-button__hidden" type="radio" name="ratingd" id="1d" checked>
-                            <label class="rate-button__item rate-button__item_empty" for="1d"></label>
-                            <input class="rate-button__hidden" type="radio" name="ratingd" id="2d">
-                            <label class="rate-button__item rate-button__item_empty" for="2d"></label>
-                            <input class="rate-button__hidden" type="radio" name="ratingd" id="3d">
-                            <label class="rate-button__item rate-button__item_empty" for="3d"></label>
-                            <input class="rate-button__hidden" type="radio" name="ratingd" id="4d">
-                            <label class="rate-button__item rate-button__item_empty" for="4d"></label>
-                            <input class="rate-button__hidden" type="radio" name="ratingd" id="5d">
-                            <label class="rate-button__item rate-button__item_empty" for="5d"></label>
-                        </div>
-                        <div class="stocks__catalog-item-image-wrapper" style="background: url('../assets/catalog-images/5.jpg'); background-position: center; background-size: cover;">
-                            <header class="image-wrapper__header">
-                                <div class="image-wrapper__label">Хит продаж</div>
-                                <div class="favourite-product">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M11.9998 21.6L11.6462 21.9536C11.74 22.0473 11.8672 22.1 11.9998 22.1C12.1324 22.1 12.2596 22.0473 12.3534 21.9536L11.9998 21.6ZM2.45666 12.0569L2.1031 12.4104H2.1031L2.45666 12.0569ZM10.4567 4.05688L10.1031 4.41043L10.4567 4.05688ZM11.9998 5.60002L11.6462 5.95358C11.8415 6.14884 12.1581 6.14884 12.3534 5.95358L11.9998 5.60002ZM13.5429 4.05688L13.1894 3.70332V3.70332L13.5429 4.05688ZM12.3534 21.2465L2.81021 11.7033L2.1031 12.4104L11.6462 21.9536L12.3534 21.2465ZM21.1894 11.7033L11.6462 21.2465L12.3534 21.9536L21.8965 12.4104L21.1894 11.7033ZM10.1031 4.41043L11.6462 5.95358L12.3534 5.24647L10.8102 3.70333L10.1031 4.41043ZM12.3534 5.95358L13.8965 4.41043L13.1894 3.70332L11.6462 5.24647L12.3534 5.95358ZM17.5429 1.90002C15.91 1.90002 14.344 2.54869 13.1894 3.70332L13.8965 4.41043C14.8636 3.44333 16.1753 2.90002 17.5429 2.90002V1.90002ZM22.6998 8.05688C22.6998 9.42456 22.1565 10.7362 21.1894 11.7033L21.8965 12.4104C23.0511 11.2558 23.6998 9.68978 23.6998 8.05688H22.6998ZM23.6998 8.05688C23.6998 4.65654 20.9433 1.90002 17.5429 1.90002V2.90002C20.391 2.90002 22.6998 5.20883 22.6998 8.05688H23.6998ZM6.45666 2.90002C7.82434 2.90002 9.13601 3.44333 10.1031 4.41043L10.8102 3.70333C9.65558 2.54869 8.08956 1.90002 6.45666 1.90002V2.90002ZM1.2998 8.05688C1.2998 5.20883 3.60861 2.90002 6.45666 2.90002V1.90002C3.05632 1.90002 0.299805 4.65654 0.299805 8.05688H1.2998ZM2.81021 11.7033C1.84311 10.7362 1.2998 9.42456 1.2998 8.05688H0.299805C0.299805 9.68978 0.948469 11.2558 2.1031 12.4104L2.81021 11.7033Z" fill="#FEFEFE"/>
-                                    </svg>
-                                </div>
-                            </header>
-                            <main class="product__main">
-                                <h2 class="product__information-title">Общая информация:</h2>
-        
-                                <div class="product__information-block">
-                                    <span class="product__information-name product__information-manufacturer">Производитель: </span> 
-                                    <span class="product__information-value product__manufacturer-value">ООО «Мореодор»</span>
-                                </div>
-        
-                                <div class="product__information-block">
-                                    <span class="product__information-name product__information-made-in">Страна производства: </span> 
-                                    <span class="product__information-value product__made-in-value">Россия</span>
-                                </div>
-        
-                                <div class="product__information-block">
-                                    <span class="product__information-name product__information-weight">Вес: </span> 
-                                    <span class="product__information-value product__weight-value">500 гр.</span>
-                                </div>
-                            </main>
-                            <footer class="image-wrapper__footer">
-                                Есть на складе!
-                            </footer>
-                        </div>
-                        <header class="product__header">
-                            <a href="#">
-                                <h3 class="product__name">Икра Кеты</h3>
-                            </a>
-                            <p class="product__weight">За 0,25 кг</p>
-                        </header>
-                        <footer class="product__footer">
-                            <div class="product__price">
-                                <span class="product__price-digit">1 500</span>
-                                <span class="product__price-currency">₽</span>
-                            </div>
-                            <button class="product__cart-button">В корзину</button>
-                        </footer>
-                    </div>
-        
-                    <div class="stocks__catalog-item hidden-item" data-category="seafood fish">
-                        <div class="rate-button">
-                            <input class="rate-button__hidden" type="radio" name="ratingf" id="1f" checked>
-                            <label class="rate-button__item rate-button__item_empty" for="1f"></label>
-                            <input class="rate-button__hidden" type="radio" name="ratingf" id="2f">
-                            <label class="rate-button__item rate-button__item_empty" for="2f"></label>
-                            <input class="rate-button__hidden" type="radio" name="ratingf" id="3f">
-                            <label class="rate-button__item rate-button__item_empty" for="3f"></label>
-                            <input class="rate-button__hidden" type="radio" name="ratingf" id="4f">
-                            <label class="rate-button__item rate-button__item_empty" for="4f"></label>
-                            <input class="rate-button__hidden" type="radio" name="ratingf" id="5f">
-                            <label class="rate-button__item rate-button__item_empty" for="5f"></label>
-                        </div>
-                        <div class="stocks__catalog-item-image-wrapper" style="background: url('../assets/catalog-images/6.jpg'); background-position: center; background-size: cover;">
-                            <header class="image-wrapper__header">
-                                <div class="image-wrapper__label">Хит продаж</div>
-                                <div class="favourite-product">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M11.9998 21.6L11.6462 21.9536C11.74 22.0473 11.8672 22.1 11.9998 22.1C12.1324 22.1 12.2596 22.0473 12.3534 21.9536L11.9998 21.6ZM2.45666 12.0569L2.1031 12.4104H2.1031L2.45666 12.0569ZM10.4567 4.05688L10.1031 4.41043L10.4567 4.05688ZM11.9998 5.60002L11.6462 5.95358C11.8415 6.14884 12.1581 6.14884 12.3534 5.95358L11.9998 5.60002ZM13.5429 4.05688L13.1894 3.70332V3.70332L13.5429 4.05688ZM12.3534 21.2465L2.81021 11.7033L2.1031 12.4104L11.6462 21.9536L12.3534 21.2465ZM21.1894 11.7033L11.6462 21.2465L12.3534 21.9536L21.8965 12.4104L21.1894 11.7033ZM10.1031 4.41043L11.6462 5.95358L12.3534 5.24647L10.8102 3.70333L10.1031 4.41043ZM12.3534 5.95358L13.8965 4.41043L13.1894 3.70332L11.6462 5.24647L12.3534 5.95358ZM17.5429 1.90002C15.91 1.90002 14.344 2.54869 13.1894 3.70332L13.8965 4.41043C14.8636 3.44333 16.1753 2.90002 17.5429 2.90002V1.90002ZM22.6998 8.05688C22.6998 9.42456 22.1565 10.7362 21.1894 11.7033L21.8965 12.4104C23.0511 11.2558 23.6998 9.68978 23.6998 8.05688H22.6998ZM23.6998 8.05688C23.6998 4.65654 20.9433 1.90002 17.5429 1.90002V2.90002C20.391 2.90002 22.6998 5.20883 22.6998 8.05688H23.6998ZM6.45666 2.90002C7.82434 2.90002 9.13601 3.44333 10.1031 4.41043L10.8102 3.70333C9.65558 2.54869 8.08956 1.90002 6.45666 1.90002V2.90002ZM1.2998 8.05688C1.2998 5.20883 3.60861 2.90002 6.45666 2.90002V1.90002C3.05632 1.90002 0.299805 4.65654 0.299805 8.05688H1.2998ZM2.81021 11.7033C1.84311 10.7362 1.2998 9.42456 1.2998 8.05688H0.299805C0.299805 9.68978 0.948469 11.2558 2.1031 12.4104L2.81021 11.7033Z" fill="#FEFEFE"/>
-                                    </svg>
-                                </div>
-                            </header>
-                            <main class="product__main">
-                                <h2 class="product__information-title">Общая информация:</h2>
-        
-                                <div class="product__information-block">
-                                    <span class="product__information-name product__information-manufacturer">Производитель: </span> 
-                                    <span class="product__information-value product__manufacturer-value">ООО «Мореодор»</span>
-                                </div>
-        
-                                <div class="product__information-block">
-                                    <span class="product__information-name product__information-made-in">Страна производства: </span> 
-                                    <span class="product__information-value product__made-in-value">Россия</span>
-                                </div>
-        
-                                <div class="product__information-block">
-                                    <span class="product__information-name product__information-weight">Вес: </span> 
-                                    <span class="product__information-value product__weight-value">500 гр.</span>
-                                </div>
-                            </main>
-                            <footer class="image-wrapper__footer">
-                                Есть на складе!
-                            </footer>
-                        </div>
-                        <header class="product__header">
-                            <a href="#">
-                                <h3 class="product__name">Юкола горбуши</h3>
-                            </a>
-                            <p class="product__weight">За 0,2 кг</p>
-                        </header>
-                        <footer class="product__footer">
-                            <div class="product__price">
-                                <span class="product__price-digit">476</span>
-                                <span class="product__price-currency">₽</span>
-                            </div>
-                            <button class="product__cart-button">В корзину</button>
-                        </footer>
-                    </div>
-        
-                    <div class="stocks__catalog-item hidden-item" data-category="seafood fish">
-                        <div class="rate-button">
-                            <input class="rate-button__hidden" type="radio" name="ratingf" id="1f" checked>
-                            <label class="rate-button__item rate-button__item_empty" for="1f"></label>
-                            <input class="rate-button__hidden" type="radio" name="ratingf" id="2f">
-                            <label class="rate-button__item rate-button__item_empty" for="2f"></label>
-                            <input class="rate-button__hidden" type="radio" name="ratingf" id="3f">
-                            <label class="rate-button__item rate-button__item_empty" for="3f"></label>
-                            <input class="rate-button__hidden" type="radio" name="ratingf" id="4f">
-                            <label class="rate-button__item rate-button__item_empty" for="4f"></label>
-                            <input class="rate-button__hidden" type="radio" name="ratingf" id="5f">
-                            <label class="rate-button__item rate-button__item_empty" for="5f"></label>
-                        </div>
-                        <div class="stocks__catalog-item-image-wrapper" style="background: url('../assets/catalog-images/6.jpg'); background-position: center; background-size: cover;">
-                            <header class="image-wrapper__header">
-                                <div class="image-wrapper__label">Хит продаж</div>
-                                <div class="favourite-product">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M11.9998 21.6L11.6462 21.9536C11.74 22.0473 11.8672 22.1 11.9998 22.1C12.1324 22.1 12.2596 22.0473 12.3534 21.9536L11.9998 21.6ZM2.45666 12.0569L2.1031 12.4104H2.1031L2.45666 12.0569ZM10.4567 4.05688L10.1031 4.41043L10.4567 4.05688ZM11.9998 5.60002L11.6462 5.95358C11.8415 6.14884 12.1581 6.14884 12.3534 5.95358L11.9998 5.60002ZM13.5429 4.05688L13.1894 3.70332V3.70332L13.5429 4.05688ZM12.3534 21.2465L2.81021 11.7033L2.1031 12.4104L11.6462 21.9536L12.3534 21.2465ZM21.1894 11.7033L11.6462 21.2465L12.3534 21.9536L21.8965 12.4104L21.1894 11.7033ZM10.1031 4.41043L11.6462 5.95358L12.3534 5.24647L10.8102 3.70333L10.1031 4.41043ZM12.3534 5.95358L13.8965 4.41043L13.1894 3.70332L11.6462 5.24647L12.3534 5.95358ZM17.5429 1.90002C15.91 1.90002 14.344 2.54869 13.1894 3.70332L13.8965 4.41043C14.8636 3.44333 16.1753 2.90002 17.5429 2.90002V1.90002ZM22.6998 8.05688C22.6998 9.42456 22.1565 10.7362 21.1894 11.7033L21.8965 12.4104C23.0511 11.2558 23.6998 9.68978 23.6998 8.05688H22.6998ZM23.6998 8.05688C23.6998 4.65654 20.9433 1.90002 17.5429 1.90002V2.90002C20.391 2.90002 22.6998 5.20883 22.6998 8.05688H23.6998ZM6.45666 2.90002C7.82434 2.90002 9.13601 3.44333 10.1031 4.41043L10.8102 3.70333C9.65558 2.54869 8.08956 1.90002 6.45666 1.90002V2.90002ZM1.2998 8.05688C1.2998 5.20883 3.60861 2.90002 6.45666 2.90002V1.90002C3.05632 1.90002 0.299805 4.65654 0.299805 8.05688H1.2998ZM2.81021 11.7033C1.84311 10.7362 1.2998 9.42456 1.2998 8.05688H0.299805C0.299805 9.68978 0.948469 11.2558 2.1031 12.4104L2.81021 11.7033Z" fill="#FEFEFE"/>
-                                    </svg>
-                                </div>
-                            </header>
-                            <main class="product__main">
-                                <h2 class="product__information-title">Общая информация:</h2>
-        
-                                <div class="product__information-block">
-                                    <span class="product__information-name product__information-manufacturer">Производитель: </span> 
-                                    <span class="product__information-value product__manufacturer-value">ООО «Мореодор»</span>
-                                </div>
-        
-                                <div class="product__information-block">
-                                    <span class="product__information-name product__information-made-in">Страна производства: </span> 
-                                    <span class="product__information-value product__made-in-value">Россия</span>
-                                </div>
-        
-                                <div class="product__information-block">
-                                    <span class="product__information-name product__information-weight">Вес: </span> 
-                                    <span class="product__information-value product__weight-value">500 гр.</span>
-                                </div>
-                            </main>
-                            <footer class="image-wrapper__footer">
-                                Есть на складе!
-                            </footer>
-                        </div>
-                        <header class="product__header">
-                            <a href="#">
-                                <h3 class="product__name">Юкола горбуши</h3>
-                            </a>
-                            <p class="product__weight">За 0,2 кг</p>
-                        </header>
-                        <footer class="product__footer">
-                            <div class="product__price">
-                                <span class="product__price-digit">476</span>
-                                <span class="product__price-currency">₽</span>
-                            </div>
-                            <button class="product__cart-button">В корзину</button>
-                        </footer>
-                    </div>
                 </div>
                 
             </section>

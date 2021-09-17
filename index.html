@@ -1528,10 +1528,102 @@
         </div>
     </footer>
 
-    <div class="quiz__button-wrapper">
-        <button class="btn btn_quiz">
-            <svg id="Capa_1" enable-background="new 0 0 447.149 447.149" height="60" viewBox="0 0 447.149 447.149" width="60" xmlns="http://www.w3.org/2000/svg"><g><path d="m225.888 70.619s36.035-74.657 122.1-65.954c3.839.427 7.319 2.457 9.58 5.589 9.461 12.605 14.317 28.07 13.761 43.821-1.626 28.763-107.83 50.919-107.83 50.919l-22.508-4.471z" fill="#f6c863"/><path d="m315.681 82.083c-21.97 8.212-45.228 12.438-68.682 12.481 31.327-28.317 71.218-45.355 113.335-48.409 4.963-.408 6.819 5.271 3.404 8.898-7.696 8.149-27.259 19.093-48.057 27.03z" fill="#eab54e"/><path d="m225.872 70.619s-36.035-74.657-122.1-65.954c-3.839.427-7.319 2.457-9.58 5.589-9.461 12.605-14.317 28.07-13.761 43.821 1.627 28.763 107.83 50.919 107.83 50.919l22.508-4.471z" fill="#f6c863"/><path d="m136.078 82.083c21.97 8.212 45.228 12.438 68.682 12.481-17.52-15.586-37.673-27.933-59.515-36.465-17.301-6.453-35.414-10.472-53.82-11.944-4.963-.408-6.819 5.271-3.404 8.898 7.669 8.149 27.287 19.093 48.057 27.03z" fill="#eab54e"/><circle cx="223.591" cy="95.537" fill="#eab54e" r="27.008"/><path d="m5.539 95.531h436.07c3.059 0 5.539 2.48 5.539 5.539v72.024c0 3.059-2.48 5.539-5.539 5.539h-436.07c-3.059 0-5.539-2.48-5.539-5.539v-72.024c0-3.059 2.48-5.539 5.539-5.539z" fill="#ef5261"/><path d="m425.115 163.397v274.253c-.009 3.055-2.484 5.53-5.539 5.539h-391.976c-3.055-.009-5.53-2.484-5.539-5.539v-274.253z" fill="#ef5261"/><path d="m22.061 178.634h403.06v19.389h-403.06z" fill="#da364c"/><path d="m191.167 95.531h64.842v347.652h-64.842z" fill="#f6c863"/><path d="m191.15 178.634h64.876v19.389h-64.876z" fill="#eab54e"/></g></svg>
-        </button>
+    <div class="modal modal-thanks">
+        <h3 class="modal-thanks__title">
+
+        </h3>
+        <p class="modal-thanks__text"></p>
+    </div>
+
+    <button type="button" class="btn btn_quiz" data-trigger-modal="btn_modal" data-label-modal="modal-begin">
+        <svg id="Capa_1" enable-background="new 0 0 447.149 447.149" height="60" viewBox="0 0 447.149 447.149" width="60" xmlns="http://www.w3.org/2000/svg"><g><path d="m225.888 70.619s36.035-74.657 122.1-65.954c3.839.427 7.319 2.457 9.58 5.589 9.461 12.605 14.317 28.07 13.761 43.821-1.626 28.763-107.83 50.919-107.83 50.919l-22.508-4.471z" fill="#f6c863"/><path d="m315.681 82.083c-21.97 8.212-45.228 12.438-68.682 12.481 31.327-28.317 71.218-45.355 113.335-48.409 4.963-.408 6.819 5.271 3.404 8.898-7.696 8.149-27.259 19.093-48.057 27.03z" fill="#eab54e"/><path d="m225.872 70.619s-36.035-74.657-122.1-65.954c-3.839.427-7.319 2.457-9.58 5.589-9.461 12.605-14.317 28.07-13.761 43.821 1.627 28.763 107.83 50.919 107.83 50.919l22.508-4.471z" fill="#f6c863"/><path d="m136.078 82.083c21.97 8.212 45.228 12.438 68.682 12.481-17.52-15.586-37.673-27.933-59.515-36.465-17.301-6.453-35.414-10.472-53.82-11.944-4.963-.408-6.819 5.271-3.404 8.898 7.669 8.149 27.287 19.093 48.057 27.03z" fill="#eab54e"/><circle cx="223.591" cy="95.537" fill="#eab54e" r="27.008"/><path d="m5.539 95.531h436.07c3.059 0 5.539 2.48 5.539 5.539v72.024c0 3.059-2.48 5.539-5.539 5.539h-436.07c-3.059 0-5.539-2.48-5.539-5.539v-72.024c0-3.059 2.48-5.539 5.539-5.539z" fill="#ef5261"/><path d="m425.115 163.397v274.253c-.009 3.055-2.484 5.53-5.539 5.539h-391.976c-3.055-.009-5.53-2.484-5.539-5.539v-274.253z" fill="#ef5261"/><path d="m22.061 178.634h403.06v19.389h-403.06z" fill="#da364c"/><path d="m191.167 95.531h64.842v347.652h-64.842z" fill="#f6c863"/><path d="m191.15 178.634h64.876v19.389h-64.876z" fill="#eab54e"/></g></svg>
+    </button>
+
+    <div class="quiz__modal-wrapper">
+        <div class="modal quiz__modal-begin" id="modal-begin">
+            <h3 class="modal__title">Хочу бесплатную доставку!</h3>
+            <p class="modal__subtitle">Пройдите тест из 3 шагов и мы  бесплатно доставим вам товар. </p>
+            <button type="button" class="btn" data-trigger-modal="btn_modal" data-label-modal="modal-quiz">Начать тест</button>
+        </div>
+
+        <div class="modal" id="modal-quiz">
+
+            <form action="/" method="POST" class="quiz__form">
+                <header class="modal__item-header">
+                    <button type="button" class="btnPrev"></button>
+                    <p class="content-block">
+                        <span class="current-block">1</span>/<span class="all-blocks">0</span> шаг
+                    </p>
+                </header>
+                <main class="modal__item-main">
+                    <div class="quiz__wrapper">
+                        <div class="quiz__block active">
+                            <p class="quiz__block-text">Что вы любите больше всего?</p>
+                            <div class="input__wrapper_checkbox">
+                                <input type="checkbox" id="checkbox1" class="checkbox checkbox_quiz">
+                                <label for="checkbox1"></label>
+                                <span>Морские деликатесы</span>
+
+                                <input type="checkbox" id="checkbox2" class="checkbox checkbox_quiz">
+                                <label for="checkbox2"></label>
+                                <span>Солёную рыбку</span>
+
+                                <input type="checkbox" id="checkbox3" class="checkbox checkbox_quiz">
+                                <label for="checkbox3"></label>
+                                <span>Свежую рыбку</span>
+                            </div>
+                        </div>
+
+                        <div class="quiz__block">
+                            <p class="quiz__block-text">Помочь с выбором?</p>
+
+                            <div class="input__wrapper_checkbox">
+                                <input type="radio" name="radio-quiz" id="radio1" class="checkbox radio_btn" checked>
+                                <label for="radio1"></label>
+                                <span>Да, помочь выбрать</span>
+
+                                <input type="radio" name="radio-quiz" id="radio2" class="checkbox radio_btn">
+                                <label for="radio2"></label>
+                                <span>Нет, знаю что хочу</span>
+                            </div>
+                        </div>
+
+                        <div class="quiz__block">
+                            <p class="quiz__block-text">Адрес доставки</p>
+
+                            <div class="input__wrapper input__wrapper_nm">
+                                <textarea type="text" id="adress-quiz" placeholder="Введите ваш адрес, куда необходимо доставить" class="order__form-input order__form-input_quiz" re></textarea>
+                                <label for="adress-quiz">Адрес доставки</label>
+                            </div>
+                            
+                        </div>
+
+                        <div class="quiz__block">
+                            <div class="input__wrapper">
+                                <input type="text" id="name-cart-quiz" class="order__form-input order__form-name" placeholder="Введите ваше имя">
+                                <label for="name-cart-quiz">Имя</label>
+                            </div>
+
+                            <div class="input__wrapper">
+                                <input type="phone" id="phone-cart-quiz" class="order__form-input order__form-phone" placeholder="+ 7">
+                                <label for="phone-cart-quiz">Телефон</label>
+                            </div>
+
+                            <div class="input__wrapper_checkbox">
+                                <input type="checkbox" id="rules-quiz" class="checkbox radio_btn" value="yes" required>
+                                <label for="rules-quiz"></label>
+                                <span class="policy-text">Согласен с условиями <a href="#">Правил пользования торговой площадкой</a> и <a href="#">правилами возврата</a></span>
+                            </div>
+                            <button type="submit" class="btn">Отправить</button>
+                        </div>
+                    </div>
+                </main>
+                <footer class="modal__item-footer">
+                    <button type="button" class="btn btnNext" data-trigger-modal="btn_modal" data-label-modal="modal-thanks">Далее</button>
+                </footer>
+
+            </form>
+        </div>
     </div>
 </body>
 </html>

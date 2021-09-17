@@ -361,7 +361,6 @@
         updateChildren(parent, children) {
             this.removeChildren(parent);
             children.forEach(child => {
-                console.log(child);
                 parent.appendChild(child);
                 child.classList.add('hidden-item');
             })
@@ -369,12 +368,8 @@
             catalogButton.showItems();
         }
 
-        init() {
-            if (!this.catalogNav) {
-                return
-            }
-            this.catalogNav.addEventListener('click', (e) => {
-                let target = e.target,
+        filter(e) {
+            let target = e.target,
                     item = target.closest(`.${this.catalogNavItems[0].classList[0]}`);
 
                 if (!item || item.classList.contains(this.activeClassName)) {
@@ -406,7 +401,13 @@
                 }
 
                 this.updateChildren(this.catalog, filteredItems);
-            });
+        }
+
+        init() {
+            if (!this.catalogNav) {
+                return
+            }
+            this.catalogNav.addEventListener('click', {handleEvent: this.filter.bind(this)});
         }
     }
 
@@ -446,4 +447,247 @@
     });
 
     mainCatalog.init();
+})();
+
+// Слайдер с пагинацией
+(() => {
+    class Slider {
+        constructor({
+            wrapper,
+            dotsWrapper,
+            dotItem,
+            activeClassName
+        }) {
+            if (!document.querySelector(wrapper)) {
+                return;
+            }
+            this.wrapper = document.querySelector(wrapper);
+            this.dotsWrapper = this.wrapper.querySelector(dotsWrapper);
+            this.dotItem = this.dotsWrapper.querySelectorAll(dotItem);
+            this.activeClassName = activeClassName;
+        }
+
+        changeSlide(e) {
+            let target = e.target,
+                item = target.closest(`.${this.dotItem[0].classList[0]}`);
+
+            if (!item || e.target.classList.contains(this.activeClassName)) {
+                return;
+            }
+
+            let previosSlideActive = this.dotsWrapper.querySelector(`.${this.activeClassName}`),
+                newBgImage = item.getAttribute('data-image-bg');
+
+            previosSlideActive.classList.remove(this.activeClassName);
+            item.classList.add(this.activeClassName);
+
+            this.wrapper.style.backgroundImage = `url(${newBgImage})`;
+        }
+
+        init() {
+            if (!this.wrapper) {
+                return
+            }
+            this.dotsWrapper.addEventListener('click', {handleEvent: this.changeSlide.bind(this)})
+        }
+    }
+
+    const productSlider = new Slider({
+        wrapper: '.product__image-wrapper',
+        dotsWrapper: '.mini-images',
+        dotItem: '.mini-images__item',
+        activeClassName: 'mini-images__item_active'
+    });
+
+    productSlider.init();
+})();
+
+// Сортировка в каталоге
+(() => {
+    const sectionCatalog = document.querySelector('.section_catalog');
+
+    if (!sectionCatalog) {
+        return;
+    }
+
+    const catalog = document.querySelector('.stocks__catalog');
+
+
+    function insertAfter(elem, refElem) {
+        return refElem.parentNode.insertBefore(elem, refElem.nextSibling);
+    }
+
+    const sort = (sortBy, direction) => {
+        for (let i = 0; i < catalog.children.length; i++) {
+            for (let j = i; j < catalog.children.length; j++) {
+                let first = +catalog.children[i].getAttribute(`data-${sortBy}`);
+                let second = +catalog.children[j].getAttribute(`data-${sortBy}`);
+                
+                if (direction === 'asc') {
+                    if (first > second) {
+                        let replaceNode = catalog.replaceChild(catalog.children[j], catalog.children[i]);
+                        insertAfter(replaceNode, catalog.children[i]);
+                    }
+                } else if (direction === 'desc') {
+                    if (first < second) {
+                        let replaceNode = catalog.replaceChild(catalog.children[j], catalog.children[i]);
+                        insertAfter(replaceNode, catalog.children[i]);
+                    }
+                }
+            }
+        }
+    };
+
+    const sortAlphabet = (direction) => {
+        for (let i = 0; i < catalog.children.length; i++) {
+            for (let j = i; j < catalog.children.length; j++) {
+                let first = catalog.children[i].querySelector('.product__name');
+                let second = catalog.children[j].querySelector('.product__name');
+
+                if (direction === 'asc') {
+                    if (first.textContent[0] > second.textContent[0]) {
+                        let replaceNode = catalog.replaceChild(catalog.children[j], catalog.children[i]);
+                        insertAfter(replaceNode, catalog.children[i]);
+                    }
+                } else if (direction === 'desc') {
+                    if (first.textContent[0] < second.textContent[0]) {
+                        let replaceNode = catalog.replaceChild(catalog.children[j], catalog.children[i]);
+                        insertAfter(replaceNode, catalog.children[i]);
+                    }
+                }
+                
+            }
+        }
+    };
+
+    const clickHandler = (e) => {
+        let item = e.target.closest('.section_catalog__sort-item');
+
+        if (!item || e.target.classList.contains(this.activeClassName)) {
+            return
+        }
+
+        let previousActiveButton = sectionCatalog.querySelector('.section_catalog__sort-item_active');
+
+        previousActiveButton.classList.remove('section_catalog__sort-item_active');
+        item.classList.add('section_catalog__sort-item_active');
+
+        let sortBy = item.getAttribute('data-sort');
+        let direction = item.getAttribute('data-direction');
+
+        if (sortBy === 'alphabet') {
+            sortAlphabet(direction);
+        } else {
+            sort(sortBy, direction);
+        }
+
+        item.getAttribute('data-direction') === 'asc' 
+            ? item.setAttribute('data-direction', 'desc') 
+            : item.setAttribute('data-direction', 'asc')
+    }
+    
+    document.querySelector('.section_catalog__sort').addEventListener('click', clickHandler);
+})();
+
+// Функционал Квиза
+(() => {
+    let modalItemBtn = document.querySelectorAll('[data-trigger-modal]');
+
+    if (!modalItemBtn) {
+        return;
+    }
+
+    let modal = document.querySelectorAll('.modal');
+    let modalContent = document.querySelector('.quiz__modal-wrapper');
+    let targetBtn;
+
+    function openModal() {
+        modalItemBtn.forEach(element => {
+            element.addEventListener('click', function(e) {
+                e.preventDefault();
+                targetBtn = element.getAttribute('data-label-modal');
+
+                modal.forEach(element => {
+                    let modalId = element.id;
+                    element.style.display = 'none';
+
+                    if (targetBtn === modalId) {
+                        element.style.display = 'block';
+                        modalContent.style.display = 'flex';
+                    }
+                });
+
+                if (element.classList.contains('btn_quiz')) {
+                    element.style.display = 'none';
+                }
+            });
+
+            
+        });
+    }
+
+    openModal();
+
+    modalContent.addEventListener('click', function (e) {
+        if (e.target.closest('.modal')) {
+            return
+        }
+        
+        modal.forEach(element => {
+            element.style.display = 'none';
+            modalContent.style.display = 'none';
+        });
+    });
+
+    let quiz_form = document.querySelector('.quiz__form');
+    if (!quiz_form) {
+        return;
+    }
+
+    let prevBtn = quiz_form.querySelector('.btnPrev');
+    let nextBtn = quiz_form.querySelector('.btnNext');
+    let quizAll = quiz_form.querySelectorAll('.quiz__block');
+    let currentQ = quiz_form.querySelector('.current-block');
+    let count = 0;
+
+    removeBtn();
+
+    quiz_form.querySelector('.all-blocks').textContent = `${quizAll.length}`;
+
+    nextBtn.addEventListener('click', function () {
+        currentQ.textContent++;
+        count++
+        initQuiz();
+        removeBtn();
+    })
+
+
+    prevBtn.addEventListener('click', function () {
+        count--
+        currentQ.textContent--;
+        initQuiz();
+        removeBtn();
+    })
+
+    function initQuiz() {
+        quizAll.forEach((element, i) => {
+            element.classList.remove('active')
+            if (i === count) {
+                element.classList.add('active')
+            }
+        })
+    }
+
+    function removeBtn() {
+        if (count === 0) {
+            prevBtn.style.display = 'none'
+        } else if (count !== 0) {
+            prevBtn.style.display = 'inline-flex'
+        }
+        if (count === quizAll.length - 1) {
+            nextBtn.style.display = 'none'
+        } else if (count !== quizAll.length) {
+            nextBtn.style.display = 'flex'
+        }
+    }
 })();
