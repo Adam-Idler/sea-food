@@ -68,12 +68,11 @@
                 }
                 .slider-carousel_item {
                     display: flex;
-                    flex-direction: column;
+                    justify-content: center;
                     max-width: 100%;
                 }
             `;
             document.head.append(style);
-        
             for (const item of this.slides) {
                 item.style.flex = `0 0 ${this.slideWidth + 0.5}%`;
             }
@@ -145,8 +144,8 @@
         infinity: true,
         responsive: [
             {
-            breakpoint: 576,
-            slidesToShow: 1
+            breakpoint: 1250,
+            slidesToShow: 2
             }
         ]
     });
@@ -162,7 +161,11 @@
         infinity: true,
         responsive: [
             {
-            breakpoint: 576,
+            breakpoint: 1250,
+            slidesToShow: 2
+            },
+            {
+            breakpoint: 900,
             slidesToShow: 1
             }
         ]
@@ -179,8 +182,8 @@
         infinity: true,
         responsive: [
             {
-            breakpoint: 576,
-            slidesToShow: 1
+            breakpoint: 1250,
+            slidesToShow: 2
             }
         ]
     });
@@ -196,8 +199,8 @@
         infinity: true,
         responsive: [
             {
-            breakpoint: 576,
-            slidesToShow: 1
+            breakpoint: 1250,
+            slidesToShow: 2
             }
         ]
     });
@@ -213,9 +216,10 @@
         infinity: true,
         responsive: [
             {
-            breakpoint: 576,
-            slidesToShow: 1
+            breakpoint: 1250,
+            slidesToShow: 2
             }
+
         ]
     });
     
@@ -589,6 +593,23 @@
     document.querySelector('.section_catalog__sort').addEventListener('click', clickHandler);
 })();
 
+// Бургер меню
+(() => {
+    const burgerMenu = document.querySelector('.burger-menu');
+
+    document.body.addEventListener('click', (e) => {
+        if (burgerMenu.classList.contains('active') && !e.target.classList.contains('burger-btn')) {
+            burgerMenu.classList.remove('active');
+        }
+
+        if (e.target.classList.contains('burger-btn')) {
+            burgerMenu.classList.toggle('active');
+        } else {
+            return;
+        }
+    });
+})();
+
 // Функционал Квиза
 (() => {
     let modalItemBtn = document.querySelectorAll('[data-trigger-modal]');
@@ -607,13 +628,13 @@
             element.addEventListener('click', function(e) {
                 e.preventDefault();
                 targetBtn = element.getAttribute('data-label-modal');
-
                 modal.forEach(element => {
                     let modalId = element.id;
                     element.style.display = 'none';
 
                     if (targetBtn === modalId) {
                         element.style.display = 'block';
+
                         modalContent.style.display = 'flex';
                     }
                 });
@@ -749,15 +770,6 @@
         localStorage.setItem('cart', JSON.stringify(cart));
     };
 
-    const updateCartTotalItemsCounter = () => {
-        const totalQuantity = Object.keys(cart).reduce((acc, name) => {
-          const { count } = cart[name];
-          return acc + count;
-        }, 0);
-    
-        return totalQuantity;
-      };
-
     const updateCartTotalPrice = () => {
         const names = Object.keys(cart);
         let totalPrice = 0;
@@ -792,10 +804,9 @@
 
     const updateCart = () => {
         const totalPrice = updateCartTotalPrice();
-        const totalQuantity = updateCartTotalItemsCounter();
         saveCart();
-
-        document.querySelector('.cart-product-count').textContent = totalQuantity;
+        console.log();
+        document.querySelector('.cart-product-count').textContent = Object.keys(cart).length;
 
         if (!cartWrapperDOMElement) {
             return;
