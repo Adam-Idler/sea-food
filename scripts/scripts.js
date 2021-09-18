@@ -146,6 +146,10 @@
             {
             breakpoint: 1250,
             slidesToShow: 2
+            },
+            {
+            breakpoint: 900,
+            slidesToShow: 1
             }
         ]
     });
@@ -161,7 +165,7 @@
         infinity: true,
         responsive: [
             {
-            breakpoint: 1250,
+            breakpoint: 1290,
             slidesToShow: 2
             },
             {
@@ -184,6 +188,10 @@
             {
             breakpoint: 1250,
             slidesToShow: 2
+            },
+            {
+            breakpoint: 900,
+            slidesToShow: 1
             }
         ]
     });
@@ -201,6 +209,10 @@
             {
             breakpoint: 1250,
             slidesToShow: 2
+            },
+            {
+            breakpoint: 900,
+            slidesToShow: 1
             }
         ]
     });
@@ -216,8 +228,12 @@
         infinity: true,
         responsive: [
             {
-            breakpoint: 1250,
+            breakpoint: 1290,
             slidesToShow: 2
+            },
+            {
+            breakpoint: 900,
+            slidesToShow: 1
             }
 
         ]
@@ -515,7 +531,6 @@
     }
 
     const catalog = document.querySelector('.stocks__catalog');
-
 
     function insertAfter(elem, refElem) {
         return refElem.parentNode.insertBefore(elem, refElem.nextSibling);
