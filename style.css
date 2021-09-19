@@ -1092,6 +1092,12 @@ ul {
     color: #FBFCFE;
 }
 
+.empty-list-text {
+    display: none;
+    font-size: 22px;
+    text-align: center;
+}
+
 @media (max-width: 1290px) {
     .section_stocks .stocks__catalog {
         grid-template-columns: 1fr 350px;
@@ -2030,6 +2036,14 @@ ul {
     margin: 50px auto 35px;
 }
 
+.section_catalog {
+    position: relative;
+}
+
+.section_catalog .empty-list-text {
+    text-align: right;
+}
+
 @media (max-width: 1220px) {
     .section_catalog__aside-item {
         font-size: 18px;
@@ -2094,6 +2108,15 @@ ul {
         display: none;
     }
 
+    .section_catalog__catalog-list {
+        display: block;
+    }   
+
+    .empty-list-text {
+        text-align: center;
+        position: static;
+    }
+
     .section_catalog__sort {
         margin-bottom: 40px;
         justify-content: center;
@@ -2123,6 +2146,27 @@ ul {
 }
 
 @media (max-width: 790px) {
+    .quiz__modal-wrapper .modal {
+        width: 100%;
+        height: auto;
+    }
+
+    .modal .input__wrapper_checkbox {
+        margin-bottom: 50px;
+    }
+
+    .order__form-input_quiz {
+        margin-bottom: 40px;
+    }
+
+    .modal.quiz__modal-begin h3 {
+        font-size: 32px;
+    }
+
+    .modal.quiz__modal-begin p {
+        font-size: 16px;
+    }
+
     .section_catalog__catalog-list {
         display: block;
     }
@@ -2145,6 +2189,25 @@ ul {
 }
 
 @media (max-width: 490px) {
+    .quiz__modal-wrapper .modal {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .modal .quiz__block-text {
+        font-size: 16px;
+    }
+
+    .modal .input__wrapper_checkbox span {
+        font-size: 14px;
+    }
+
+    .modal .input__wrapper_checkbox .policy-text {
+        font-size: 14px;
+        font-weight: 400;
+        margin-bottom: 24px;
+    }
+
     .section_catalog__product-list .stocks__catalog {
         grid-template-columns: 300px;
         justify-content: center;
@@ -2306,10 +2369,12 @@ ul {
     align-items: center;
     border-bottom: 1px solid #D7D8DA;
     margin-bottom: 45px;
+    position: relative;
+
 }
 
-.product-info__rating-wrapper {
-    position: relative;
+.product-info__rating-wrapper_mobile {
+    display: none;
 }
 
 .product__count-of-reviews {
@@ -2512,13 +2577,25 @@ ul {
 
 .section_reccomendation__products {
     display: flex;
+    flex-wrap: nowrap;
     justify-content: space-between;
+    overflow-x: auto;
     padding: 0 20px;
+}
+
+.section_reccomendation__products::-webkit-scrollbar {
+    width: 0;
 }
 
 .stocks__catalog-item_reccomendation-wrapper {
     display: flex;
     flex-direction: column;
+    flex: 0 0 auto;
+    margin-right: 70px;
+}
+
+.stocks__catalog-item_reccomendation-wrapper:last-child {
+    margin-right: 0;
 }
 
 .stocks__catalog-item_reccomendation {
@@ -2562,6 +2639,148 @@ ul {
 .stocks-product__info-item_reviews::before {
     content: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 0.865234L9.79611 6.3931H15.6085L10.9062 9.80951L12.7023 15.3374L8 11.921L3.29772 15.3374L5.09383 9.80951L0.391548 6.3931H6.20389L8 0.865234Z' fill='%23FAFE3E'/%3E%3C/svg%3E%0A");
     margin-right: 3px;
+}
+
+.product__wrapper > h3 {
+    display: none;
+}
+
+@media (max-width: 1290px) {
+    .section_tabs__tabs-list {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+    }
+
+    .section_tabs__tabs-list::-webkit-scrollbar {
+        width: 0;
+    }
+
+    .section_tabs__tabs-item {
+        flex: 0 0 auto;
+        margin-right: 70px;
+    }
+
+    .section_tabs__tabs-item:last-child {
+        margin-right: 0;
+    }
+
+    .product__wrapper {
+        position: relative;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product__image-wrapper,
+    .product-info {
+        width: 100%;
+    }
+
+    .product__image-wrapper {
+        height: 600px;
+    }
+
+    .product-info h3 {
+        display: none;
+    }
+
+    .product__wrapper > h3 {
+        display: block;
+        margin-bottom: 24px;
+    }
+
+    .product-info__rating-wrapper {
+        display: none;
+    }
+
+    .product-info__rating-wrapper_mobile {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        border-bottom: none;
+    }
+
+    .product__info__buy-count_mobile {
+        font-weight: 700;
+        color: #010409;
+    }
+
+    .product-info__rating-wrapper {
+        margin-bottom: 0;
+    }
+
+    .product-info {
+        padding-top: 50px;
+    }
+
+    .product__footer .btn {
+        width: 350px;
+    }
+
+    .product-info__price {
+        margin-left: 0;
+        text-align: right;
+    }
+
+    .product__old-price {
+        right: 0;
+        top: -33px;
+    }
+
+    .product-info__weight-words {
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 920px) {
+    .product__image-wrapper {
+        height: 450px;
+    }
+}
+
+@media (max-width: 700px) {
+    .page__navigation a {
+        white-space: nowrap;
+    }
+
+    .page__navigation .page__navigation-item_active {
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .slider__content.slider__content_news {
+        overflow: hidden;
+    }
+
+    .product__image-wrapper {
+        height: auto;
+        min-height: 40vh;
+        margin-bottom: 120px;
+    }
+
+    .product__footer {
+        flex-wrap: wrap;
+    }
+
+    .product__footer .btn {
+        width: 100%;
+    } 
+
+    .product__in-stock {
+        margin-bottom: 80px;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+
+    .product__image-wrapper .mini-images {
+        bottom: -100px;
+        left: 0;
+    }
+
+    .product__image-wrapper .mini-images .mini-images__item {
+        width: 70px;
+        height: 50px;
+    }
 }
 
 /* section-reccomendation end */
@@ -2848,7 +3067,7 @@ ul {
     left: -8px;
     top: -15px;
     position: absolute;
-
+    text-align: center;
 }
 
 .order-item__image-wrapper img {
@@ -3114,6 +3333,7 @@ ul {
 
 .form__privacy-pollicy {
     margin-top: 40px;
+    width: 100%;
 }
 
 .form__privacy-pollicy a {
@@ -3123,6 +3343,10 @@ ul {
 @media (max-width: 1300px) {
     .section_cart h1 {
         margin-bottom: 60px;
+    }
+
+    .section_cart__left-side.is-empty .product-empty {
+        margin-bottom: 50px;
     }
 
     .section_cart__order-wrapper {

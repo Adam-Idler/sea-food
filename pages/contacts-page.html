@@ -195,8 +195,9 @@
             <p class="section__subtitle">Зарезервируйте скидку* сейчас и мы поможем оформить ваш заказ.</p>
             <small class="section_gift__explanation">*скидка привязывается к номеру телефона</small>
 
-            <form action="/" class="section_gift__send-email">
-                <input type="phone" placeholder="+ 7" class="send-email__input">
+            <form class="section_gift__send-email">
+                <input type="hidden" name="id" value="section_gift">
+                <input required type="tel" name="subscribe_tel" placeholder="+ 7" minlength="6" maxlength="18" class="send-email__input" >
                 <button type="submit" class="send-email__button" data-trigger-modal="btn_modal" data-label-modal="modal-thanks_subscribe">Подписаться</button>
             </form>
 
@@ -313,7 +314,8 @@
 
         <div class="modal" id="modal-quiz">
 
-            <form action="/" method="POST" class="quiz__form">
+            <form class="quiz__form">
+                <input type="hidden" name="id" value="section_quiz">
                 <header class="modal__item-header">
                     <button type="button" class="btnPrev"></button>
                     <p class="content-block">
@@ -325,15 +327,15 @@
                         <div class="quiz__block active">
                             <p class="quiz__block-text">Что вы любите больше всего?</p>
                             <div class="input__wrapper_checkbox">
-                                <input type="checkbox" id="checkbox1" class="checkbox checkbox_quiz">
+                                <input type="checkbox" id="checkbox1" name="quizCheckbox[]" class="checkbox checkbox_quiz" value="Морские деликатесы">
                                 <label for="checkbox1"></label>
                                 <span>Морские деликатесы</span>
 
-                                <input type="checkbox" id="checkbox2" class="checkbox checkbox_quiz">
+                                <input type="checkbox" id="checkbox2" name="quizCheckbox[]" class="checkbox checkbox_quiz" value="Солёную рыбку">
                                 <label for="checkbox2"></label>
                                 <span>Солёную рыбку</span>
 
-                                <input type="checkbox" id="checkbox3" class="checkbox checkbox_quiz">
+                                <input type="checkbox" id="checkbox3" name="quizCheckbox[]" class="checkbox checkbox_quiz" value="Свежую рыбку">
                                 <label for="checkbox3"></label>
                                 <span>Свежую рыбку</span>
                             </div>
@@ -343,11 +345,11 @@
                             <p class="quiz__block-text">Помочь с выбором?</p>
 
                             <div class="input__wrapper_checkbox">
-                                <input type="radio" name="radio-quiz" id="radio1" class="checkbox radio_btn" checked>
+                                <input type="radio" name="help[]" id="radio1" class="checkbox radio_btn" checked value="yes">
                                 <label for="radio1"></label>
                                 <span>Да, помочь выбрать</span>
 
-                                <input type="radio" name="radio-quiz" id="radio2" class="checkbox radio_btn">
+                                <input type="radio" name="help[]" id="radio2" class="checkbox radio_btn" value="none">
                                 <label for="radio2"></label>
                                 <span>Нет, знаю что хочу</span>
                             </div>
@@ -357,7 +359,7 @@
                             <p class="quiz__block-text">Адрес доставки</p>
 
                             <div class="input__wrapper input__wrapper_nm">
-                                <textarea type="text" id="adress-quiz" placeholder="Введите ваш адрес, куда необходимо доставить" class="order__form-input order__form-input_quiz" required></textarea>
+                                <textarea id="adress-quiz" name="address" placeholder="Введите ваш адрес, куда необходимо доставить" class="order__form-input order__form-input_quiz" required></textarea>
                                 <label for="adress-quiz">Адрес доставки</label>
                             </div>
                             
@@ -365,12 +367,12 @@
 
                         <div class="quiz__block">
                             <div class="input__wrapper">
-                                <input type="text" id="name-cart-quiz" class="order__form-input order__form-name" placeholder="Введите ваше имя" required>
+                                <input required type="text" id="name-cart-quiz" name="name" class="order__form-input order__form-name" placeholder="Введите ваше имя">
                                 <label for="name-cart-quiz">Имя</label>
                             </div>
 
                             <div class="input__wrapper">
-                                <input type="phone" id="phone-cart-quiz" class="order__form-input order__form-phone" placeholder="+ 7" required>
+                                <input required type="tel" id="phone-cart-quiz" name="phone" class="order__form-input order__form-phone" placeholder="+ 7">
                                 <label for="phone-cart-quiz">Телефон</label>
                             </div>
 

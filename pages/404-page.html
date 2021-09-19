@@ -110,8 +110,9 @@
             <p class="section__subtitle">Зарезервируйте скидку* сейчас и мы поможем оформить ваш заказ.</p>
             <small class="section_gift__explanation">*скидка привязывается к номеру телефона</small>
 
-            <form action="/" class="section_gift__send-email">
-                <input type="phone" placeholder="+ 7" class="send-email__input">
+            <form class="section_gift__send-email">
+                <input type="hidden" name="id" value="section_gift">
+                <input required type="tel" name="subscribe_tel" placeholder="+ 7" minlength="6" maxlength="18" class="send-email__input" >
                 <button type="submit" class="send-email__button" data-trigger-modal="btn_modal" data-label-modal="modal-thanks_subscribe">Подписаться</button>
             </form>
 

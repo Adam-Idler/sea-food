@@ -144,7 +144,7 @@
         infinity: true,
         responsive: [
             {
-            breakpoint: 1250,
+            breakpoint: 1290,
             slidesToShow: 2
             },
             {
@@ -370,6 +370,7 @@
             this.catalogNavItems = this.section.querySelectorAll(catalogNavItems)
             this.catalogItems = this.section.querySelectorAll(catalogItems);
             this.activeClassName = activeClassName;
+            this.hideElementText = document.querySelector('.empty-list-text');
         }
 
         removeChildren(parent) {
@@ -380,6 +381,7 @@
 
         updateChildren(parent, children) {
             this.removeChildren(parent);
+
             children.forEach(child => {
                 parent.appendChild(child);
                 child.classList.add('hidden-item');
@@ -390,37 +392,43 @@
 
         filter(e) {
             let target = e.target,
-                    item = target.closest(`.${this.catalogNavItems[0].classList[0]}`);
+                item = target.closest(`.${this.catalogNavItems[0].classList[0]}`);
 
-                if (!item || item.classList.contains(this.activeClassName)) {
-                    return;
-                }
+            if (!item || item.classList.contains(this.activeClassName)) {
+                return;
+            }
 
-                e.preventDefault();
-                let filterValue = item.getAttribute('data-filter'),
-                    previousBtnActive = this.catalogNav.querySelector(`.${this.catalogNavItems[0].classList[0]}.${this.activeClassName}`),
-                    hiddenElements = this.section.querySelectorAll('.hidden-item');
+            e.preventDefault();
+            let filterValue = item.getAttribute('data-filter'),
+                previousBtnActive = this.catalogNav.querySelector(`.${this.catalogNavItems[0].classList[0]}.${this.activeClassName}`),
+                hiddenElements = this.section.querySelectorAll('.hidden-item');
 
-                previousBtnActive.classList.remove(this.activeClassName);
-                item.classList.add(this.activeClassName);
+            previousBtnActive.classList.remove(this.activeClassName);
+            item.classList.add(this.activeClassName);
 
-                if (filterValue === 'all') {
-                    this.updateChildren(this.catalog, this.catalogItems);
-                    return;
-                }
+            if (filterValue === 'all') {
+                this.updateChildren(this.catalog, this.catalogItems);
+                return;
+            }
 
-                let filteredItems = [];
-                filteredItems = [...this.catalogItems].filter(item => {
-                    return item.getAttribute('data-category').includes(filterValue)
-                });
+            let filteredItems = [];
+            filteredItems = [...this.catalogItems].filter(item => {
+                return item.getAttribute('data-category').includes(filterValue)
+            });
 
-                if (hiddenElements === 0) {
-                    this.section.querySelector('.catalog-btn-show-more').parentNode.classList.add('hidden-item');
-                } else {
-                    this.section.querySelector('.catalog-btn-show-more').parentNode.classList.remove('hidden-item');
-                }
+            if (hiddenElements === 0) {
+                this.section.querySelector('.catalog-btn-show-more').parentNode.classList.add('hidden-item');
+            } else if (hiddenElements !== 0) {
+                this.section.querySelector('.catalog-btn-show-more').parentNode.classList.remove('hidden-item');
+            } 
+            
+            if (!filteredItems.length) {
+                this.hideElementText.style.display = 'block';
+            } else {
+                this.hideElementText.style.display = 'none';
+            }
 
-                this.updateChildren(this.catalog, filteredItems);
+            this.updateChildren(this.catalog, filteredItems);
         }
 
         init() {
@@ -641,7 +649,6 @@
     function openModal() {
         modalItemBtn.forEach(element => {
             element.addEventListener('click', function(e) {
-                e.preventDefault();
                 targetBtn = element.getAttribute('data-label-modal');
                 modal.forEach(element => {
                     let modalId = element.id;
@@ -747,16 +754,18 @@
     const cartTotalPriceInputDOMElement = document.querySelector('.js-cart-total-price-input');
     const cartWrapperDOMElement = document.querySelector('.section_cart__left-side');
 
-    const renderCartItem = ({ name, src, price, weight, quantity, count }) => {
+    const renderCartItem = ({ name, src, price, weight, quantity, count, label }) => {
         if (!cartDOMElement.classList.contains('cart__products-list')) {
             return
         }
 
         const cartItemDOMElement = document.createElement('div');
 
+        const labelWrap = label ? `<div class="image-wrapper__label">${label}</div>` : ''
+
         const cartItemTemplate = `
             <div class="order-item__image-wrapper">
-                <div class="image-wrapper__label">Хит продаж</div>
+                ${labelWrap}
                 <img src=".${src}" alt="product image">
             </div>
             <h3 class="order__name">
@@ -820,7 +829,6 @@
     const updateCart = () => {
         const totalPrice = updateCartTotalPrice();
         saveCart();
-        console.log();
         document.querySelector('.cart-product-count').textContent = Object.keys(cart).length;
 
         if (!cartWrapperDOMElement) {
@@ -877,10 +885,11 @@
         const price = productDOMElement.getAttribute('data-product-price');
         const src = productDOMElement.getAttribute('data-product-img');
         const weight = productDOMElement.getAttribute('data-product-weight');
+        const label = productDOMElement.getAttribute('data-product-label');
         const quantity = +productDOMElement.getAttribute('data-product-weight').replace(/[^\d.]/g, '');
         const count = 1;
 
-        return { name, price, src, weight, quantity, count }
+        return { name, price, src, weight, quantity, count, label }
     }
 
     const renderCart = () => {
@@ -949,3 +958,59 @@
 
     cartInit();
 })();
+
+// Отправка форм
+(() => {
+    const popups = document.querySelectorAll('.modal');
+
+    let serialize = (form) => {
+        let items = form.querySelectorAll('input, select, textarea'),
+            str = '';
+
+        items.forEach((item, i) => {
+            let name = item.name,
+                value = item.value,
+                separator = i === 0 ? '' : '&';
+            if (value) {
+                str += separator + name + '=' + value;
+            }
+        });
+
+        return str;
+    };
+
+    let formSend = (form) => {
+        let data = serialize(form),
+            xhr = new XMLHttpRequest(),
+            url = './mail/mail.php';
+        
+        xhr.open('POST', url);
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        
+        xhr.onload = () => {
+            setTimeout( () => {
+                popups.forEach(popup => {
+                    popup.style.display = 'none';
+                    popup.parentNode.style.display = 'none';
+                })
+            }, 5000)
+            
+            form.reset();
+        };
+
+        xhr.send(data);
+    };
+
+    const forms = document.querySelectorAll('form');
+
+    forms.forEach(form => {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            formSend(form);
+        });
+    });
+})();
+
+// FTP
+// Логин: sinits7i_seafood
+// Пароль: ZqP*t6QY
